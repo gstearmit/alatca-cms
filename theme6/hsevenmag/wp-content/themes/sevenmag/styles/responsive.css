@@ -1,0 +1,195 @@
+/* #Tablet (Landscape)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 959px) and (max-width: 1177px) {
+	body {overflow-x: hidden}
+	.boxed, .boxed-margin {width: 98%;margin: 0 auto}
+	.boxed-margin {margin: 10px auto}
+	.row {width: 950px}
+	.head #mobilepro, .subarrow { display: block; }
+	.head .subarrow {display: block;z-index: 99;position: absolute;top: 0;right: 0;cursor: pointer;font-size: 16px;}
+	.head .sf-menu {position: absolute;top: 52px;right: auto;left: 0;background: #1D1E20;}
+	.head .sf-menu a.sf-with-ul {margin-right: 50px !important}
+	.head .sf-menu > li a {padding-left: 20px !important;}
+	.head .sf-menu i, .head .sf-menu li a {color: #FFF}
+	.head .sf-menu, .head .sf-sub-indicator {width: 35%!important;display: none; margin: 4px 0 !important }
+	.head .sf-menu li { margin: 0; border: 0 }
+	.head .sf-menu.xactive {display: block!important;}
+	.head .sf-menu li {float: none!important;display: block!important;width: 100%!important;}
+	.head .sf-menu ul:before { content: ""; border-width: 0 0 0 0 !important }
+	.head .sf-menu > li.sfHover:before {color: #000;background: none;width: 0;height: 0px;}
+	.head .sf-menu li:hover ul, .head .sf-menu li.sfHover ul { padding: 0 !important }
+	.head .sf-menu li { float: none !important; display: block !important; width: 100% !important;overflow: hidden; }
+	.head .sf-menu li a, .head .sf-menu li:first-child a, .head .sf-menu ul li, .head .sf-menu li.current { float: none !important; border: 0; }
+	.head .sf-menu li:hover ul, .head .sf-menu li.sfHover ul {box-shadow: none;-webkit-animation: initial;animation: initial;-moz-animation: initial;-o-animation: initial; }
+	.head .sf-menu ul {position:static !important; display: none !important; width: 100%; }
+	.head .xpopdrop > ul {display: block !important; visibility: inherit !important }
+	.head .sf-menu li:hover > a, .head .sf-menu li > a:hover, .head .sf-menu li.current > a {border: 0}
+	.head .sf-menu li li, .head .sfHover, .head .sf-menu li:hover, .head .sf-menu li li.current { background: none !important }
+	.head .sf-menu li li:hover > a, .head .sf-menu li li > a:hover, .head .sf-menu li li.current > a {color: #ddd}
+	.head .sf-menu a {padding: 16px 0}
+	.head .sf-menu li li a {padding-left: 10% !important;}
+	.head .sf-menu li li li a {padding-left: 13% !important;}
+	.head .sf-menu li li li li a {padding-left: 16% !important;}
+	.head .sf-menu li.current_page_item > a, .head .sf-menu li.current-menu-item > a {border: none}
+	.sec_head .sf-menu li a {padding: 0 10px}
+
+	.more_news_pic.featured_thumb {width: 28.4%}
+	.grid_6 .def_wgr {min-width: 200px;width: 45%;min-height: 220px}
+	.sec_head .subarrow, .b_4 .tt_review {display: none}
+	.details_w {width: 36%}
+}
+
+/* #Tablet (Portrait)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body {overflow-x: hidden}
+	.boxed, .boxed-margin {width: 98%;margin: 0 auto}
+	.row { width: 700px }
+	.sidebar, .post {width: 100%;margin: 0 0 40px}
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12,
+	.grid_1.alpha,.grid_1.omega, .grid_2.alpha,.grid_2.omega, .grid_3.alpha,.grid_3.omega, .grid_4.alpha,.grid_4.omega, .grid_5.alpha,.grid_5.omega,
+	.grid_6.alpha,.grid_6.omega, .grid_7.alpha,.grid_7.omega, .grid_8.alpha,.grid_8.omega, .grid_9.alpha,.grid_9.omega, .grid_10.alpha,.grid_10.omega, .grid_11.alpha,.grid_11.omega {width: 100%;margin: 0 0 30px}
+
+	#mobilepro, .subarrow { display: block; }
+	.subarrow {display: block;z-index: 99;position: absolute;top: 0;right: 0;cursor: pointer;font-size: 16px;}
+	.sf-menu {position: absolute;top: 60px;right: auto;left: 0;background: #1D1E20;}
+	.sf-menu a.sf-with-ul {margin-right: 50px !important}
+	.sf-menu > li a {padding-left: 20px !important;}
+	.sf-menu i, .sf-menu li a {color: #FFF}
+	.sf-menu, .sf-sub-indicator {width: 35%!important;display: none; margin: 4px 0 !important }
+	.sf-menu li { margin: 0; border: 0 }
+	.sf-menu.xactive {display: block!important;}
+	.sf-menu li {float: none!important;display: block!important;width: 100%!important;}
+	.sf-menu ul:before { content: ""; border-width: 0 0 0 0 !important }
+	.sf-menu > li.sfHover:before {color: #000;background: none;width: 0;height: 0px;}
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul { padding: 0 !important }
+	.sf-menu li { float: none !important; display: block !important; width: 100% !important;overflow: hidden; }
+	.sf-menu li a, .sf-menu li:first-child a, .sf-menu ul li, .sf-menu li.current { float: none !important; border: 0; }
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul {box-shadow: none;-webkit-animation: initial;animation: initial;-moz-animation: initial;-o-animation: initial; }
+	.sf-menu ul {position:static !important; display: none !important; width: 100%; }
+	.xpopdrop > ul {display: block !important; visibility: inherit !important }
+	.sf-menu li:hover > a, .sf-menu li > a:hover, .sf-menu li.current > a {border: 0}
+	.sf-menu li li, .sfHover, .sf-menu li:hover, .sf-menu li li.current { background: none !important }
+	.sf-menu li li:hover > a, .sf-menu li li > a:hover, .sf-menu li li.current > a {color: #ddd}
+	.sf-menu a {padding: 16px 0}
+	.sf-menu li li a {padding-left: 10% !important;}
+	.sf-menu li li li a {padding-left: 13% !important;}
+	.sf-menu li li li li a {padding-left: 16% !important;}
+	.sf-menu li.current_page_item > a, .sf-menu li.current-menu-item > a {border: none}
+	.sec_head .sf-menu {top: 32px}
+	.sec_head .sf-menu a {color: #FFF !important;padding: 6px 20px !important;margin: 4px 0 !important}
+
+	h3 {font-size: 16px}
+	.pagination-tt {margin: 0 0 60px 0}
+	.copyright {float: none;display: table;margin: 0 auto}
+	#footer .grid_3, #footer .grid_4, #footer .grid_9 {width: 48%; margin: 0 1% 30px}
+	.grid_8 .grid_6 {width: 48%}
+	.b_6 .grid_6, .b_1 .grid_6, .b_3 .grid_6 {width: 48%;margin: 0 1%}
+	.b_3 .more_posts {margin-top: -10px}
+}
+
+/* #Mobile (Landscape)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	body {overflow-x: hidden}
+	.boxed, .boxed-margin {width: 100%;margin: 0 auto}
+	.row { width: 400px }
+	.sidebar, .post {width: 100%;margin: 0 0 40px}
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12,
+	.grid_1.alpha,.grid_1.omega, .grid_2.alpha,.grid_2.omega, .grid_3.alpha,.grid_3.omega, .grid_4.alpha,.grid_4.omega, .grid_5.alpha,.grid_5.omega,
+	.grid_6.alpha,.grid_6.omega, .grid_7.alpha,.grid_7.omega, .grid_8.alpha,.grid_8.omega, .grid_9.alpha,.grid_9.omega, .grid_10.alpha,.grid_10.omega, .grid_11.alpha,.grid_11.omega {width: 100%;margin: 0 0 30px}
+
+	#mobilepro, .subarrow { display: block }
+	.subarrow {display: block;z-index: 99;position: absolute;top: 0;right: 0;cursor: pointer;font-size: 16px;}
+	.sf-menu {position: absolute;top: 52px;right: auto;left: 0;background: #1D1E20;}
+	.sf-menu a.sf-with-ul {margin-right: 50px !important}
+	.sf-menu > li a {padding-left: 20px !important;}
+	.sf-menu i, .sf-menu li a {color: #FFF}
+	.sf-menu, .sf-sub-indicator {width: 60%!important;display: none; margin: 4px 0 !important }
+	.sf-menu li { margin: 0; border: 0 }
+	.sf-menu.xactive {display: block!important;}
+	.sf-menu li {float: none!important;display: block!important;width: 100%!important;}
+	.sf-menu ul:before { content: ""; border-width: 0 0 0 0 !important }
+	.sf-menu > li.sfHover:before {color: #000;background: none;width: 0;height: 0px;}
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul { padding: 0 !important }
+	.sf-menu li { float: none !important; display: block !important; width: 100% !important;overflow: hidden; }
+	.sf-menu li a, .sf-menu li:first-child a, .sf-menu ul li, .sf-menu li.current { float: none !important; border: 0; }
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul {box-shadow: none;-webkit-animation: initial;animation: initial;-moz-animation: initial;-o-animation: initial; }
+	.sf-menu ul {position:static !important; display: none !important; width: 100%; }
+	.xpopdrop > ul {display: block !important; visibility: inherit !important }
+	.sf-menu li:hover > a, .sf-menu li > a:hover, .sf-menu li.current > a {border: 0}
+	.sf-menu li li, .sfHover, .sf-menu li:hover, .sf-menu li li.current { background: none !important }
+	.sf-menu li li:hover > a, .sf-menu li li > a:hover, .sf-menu li li.current > a {color: #ddd}
+	.sf-menu a {padding: 16px 0}
+	.sf-menu li li a {padding-left: 10% !important;}
+	.sf-menu li li li a {padding-left: 13% !important;}
+	.sf-menu li li li li a {padding-left: 16% !important;}
+	.sf-menu li.current_page_item > a, .sf-menu li.current-menu-item > a {border: none}
+	.sec_head .sf-menu {top: 32px}
+	.sec_head .sf-menu a {color: #FFF !important;padding: 6px 20px !important;margin: 4px 0 !important}
+
+	h3 {font-size: 16px}
+	.pagination-tt {margin: 0 0 60px 0}
+	.copyright {float: none;display: table;margin: 0 auto}
+	#popup {width: 300px}
+	.banner {margin: 0 0 10px;width: 100%}
+	.sec_head .social { display: none }
+	.sec_head .r_post { display: block }
+	.medium_thumb .post_thumbnail {width: 100%;margin: 0 0 10px 0}
+	.big_carousel .owl-pagination, .slideshow_b5 .owl-pagination {display: none}
+	#block_carousel .owl-controls {right: -20px}
+	.grid_6 .def_wgr {min-width: inherit;width: 94%}
+}
+
+/*  #Mobile (Portrait) 320px
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 100px) and (max-width: 480px) {
+	body {overflow-x: hidden}
+	.boxed, .boxed-margin {width: 100%;margin: 0 auto}
+	.row { width: 290px; padding: 0; }
+	.sidebar, .post {width: 100%;margin: 0 0 40px}
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12,
+	.grid_1.alpha,.grid_1.omega, .grid_2.alpha,.grid_2.omega, .grid_3.alpha,.grid_3.omega, .grid_4.alpha,.grid_4.omega, .grid_5.alpha,.grid_5.omega,
+	.grid_6.alpha,.grid_6.omega, .grid_7.alpha,.grid_7.omega, .grid_8.alpha,.grid_8.omega, .grid_9.alpha,.grid_9.omega, .grid_10.alpha,.grid_10.omega, .grid_11.alpha,.grid_11.omega {width: 100%;margin: 0 0 30px}
+
+	#mobilepro, .subarrow { display: block }
+	.subarrow {display: block;z-index: 99;position: absolute;top: 0;right: 0;cursor: pointer;font-size: 16px;}
+	.sf-menu {position: absolute;top: 52px;right: auto;left: 0;background: #1D1E20;}
+	.sf-menu a.sf-with-ul {margin-right: 50px !important}
+	.sf-menu > li a {padding-left: 20px !important;}
+	.sf-menu i, .sf-menu li a {color: #FFF}
+	.sf-menu, .sf-sub-indicator {width: 80%!important;display: none; margin: 4px 0 !important }
+	.sf-menu li { margin: 0; border: 0 }
+	.sf-menu.xactive {display: block!important;}
+	.sf-menu li {float: none!important;display: block!important;width: 100%!important;}
+	.sf-menu ul:before { content: ""; border-width: 0 0 0 0 !important }
+	.sf-menu > li.sfHover:before {color: #000;background: none;width: 0;height: 0px;}
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul { padding: 0 !important }
+	.sf-menu li { float: none !important; display: block !important; width: 100% !important;overflow: hidden; }
+	.sf-menu li a, .sf-menu li:first-child a, .sf-menu ul li, .sf-menu li.current { float: none !important; border: 0; }
+	.sf-menu li:hover ul, .sf-menu li.sfHover ul {box-shadow: none;-webkit-animation: initial;animation: initial;-moz-animation: initial;-o-animation: initial; }
+	.sf-menu ul {position:static !important; display: none !important; width: 100%; }
+	.xpopdrop > ul {display: block !important; visibility: inherit !important }
+	.sf-menu li:hover > a, .sf-menu li > a:hover, .sf-menu li.current > a {border: 0}
+	.sf-menu li li, .sfHover, .sf-menu li:hover, .sf-menu li li.current { background: none !important }
+	.sf-menu li li:hover > a, .sf-menu li li > a:hover, .sf-menu li li.current > a {color: #ddd}
+	.sf-menu a {padding: 16px 0}
+	.sf-menu li li a {padding-left: 10% !important;}
+	.sf-menu li li li a {padding-left: 13% !important;}
+	.sf-menu li li li li a {padding-left: 16% !important;}
+	.sf-menu li.current_page_item > a, .sf-menu li.current-menu-item > a {border: none}
+	.sec_head .sf-menu {top: 32px}
+	.sec_head .sf-menu a {color: #FFF !important;padding: 6px 20px !important;margin: 4px 0 !important}
+
+	h3 {font-size: 16px}
+	.pagination-tt {margin: 0 0 60px 0}
+	.copyright {float: none;display: table;margin: 0 auto}
+	#popup {width: 220px}
+	.banner {margin: 0 0 10px;width: 100%}
+	.sec_head .social { display: none }
+	.sec_head .r_post { display: block }
+	.medium_thumb .post_thumbnail {margin: 0 0 10px 0}
+	.big_carousel .owl-pagination, .slideshow_b5 .owl-pagination {display: none}
+	.more_news_pic.featured_thumb {width: 29%}
+	#block_carousel .owl-controls {right: -24px}
+}

@@ -1,0 +1,818 @@
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/* @override http://themes.siiimple.com/newsgrid/wp-content/themes/newsgrid/css/flexslider.css?ver=3.0 */
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+/* Browser Resets
+*********************************/
+
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+	outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@font-face {
+	font-family: 'flexslider-icon';
+	src: url('fonts/flexslider-icon.eot');
+	src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/flexslider-icon.woff') format('woff'),
+		url('fonts/flexslider-icon.ttf') format('truetype'),
+		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* TOP FEATURED Stories
+*********************************/
+
+.stories .flex-container a:active,
+.stories a:active,
+.stories .flex-container a:focus,
+.stories a:focus {
+	outline: none;
+}
+
+.stories .slides,
+.stories .flex-control-nav,
+.stories .flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+.stories {
+	margin: 0;
+	padding: 0;
+}
+
+.stories .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.stories .slides img {
+	width: 100%;
+	display: block;
+}
+
+.stories .flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+.stories .slides:after {
+	content: "\0020";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .stories .slides {
+	display: block;
+}
+
+* html .slides {
+	height: 1%;
+}
+
+.no-js .stories .slides > li:first-child {
+	display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+
+.stories {
+	position: relative;
+	zoom: 1;
+}
+
+.stories .flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.stories.loading {
+	height: 200px;
+	background: url(images/360.gif)center no-repeat;
+}
+
+.stories .slides {
+	zoom: 1;
+}
+
+/* Direction Nav */
+
+.stories .flex-direction-nav {
+	*height: 0;
+}
+
+.stories .flex-direction-nav a {
+	background: rgba(255,255,255,.7);
+	border: 0;
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: 0px 0 0;
+	position: absolute;
+	top: 40%;
+	z-index: 10;
+	overflow: hidden;
+	opacity: 1;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 12px;
+	color: rgba(0,0,0,1);
+}
+
+.stories .flex-direction-nav .flex-prev {
+	left: 20px;
+	border-left: 0;
+}
+
+.stories .flex-direction-nav .flex-next {
+	right: 20px;
+	text-align: center;
+	border-right: 0;
+}
+
+.stories:hover .flex-prev {
+	opacity: 0.7;
+	left: 20px;
+}
+
+.stories:hover .flex-next {
+	opacity: 0.7;
+	right: 20px;
+}
+
+.stories:hover .flex-next:hover, .stories:hover .flex-prev:hover {
+	opacity: 1;
+	background: #2980b9;
+	color: #fff;
+}
+
+.stories .flex-direction-nav .flex-disabled {
+	opacity: 0!important;
+	filter: alpha(opacity=0);
+	cursor: default;
+}
+
+.stories .flex-direction-nav a:before {
+	font-family: "flexslider-icon";
+	font-size: 12px;
+	display: inline-block;
+	content: '\f001';
+}
+
+.stories .flex-direction-nav a.flex-next:before {
+	content: '\f002';
+}
+
+/* Pause/Play */
+
+.stories .flex-pauseplay a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	opacity: 0.8;
+	z-index: 10;
+	overflow: hidden;
+	cursor: pointer;
+	color: #000;
+}
+
+.stories .flex-pauseplay a:before {
+	font-family: "flexslider-icon";
+	font-size: 20px;
+	display: inline-block;
+	content: '\f004';
+}
+
+.stories .flex-pauseplay a:hover {
+	opacity: 1;
+}
+
+.stories .flex-pauseplay a.flex-play:before {
+	content: '\f003';
+}
+
+/* Control Nav */
+
+.stories .flex-control-nav {
+	display: none;
+	width: 100%;
+	position: absolute;
+	bottom: -40px;
+	text-align: center;
+}
+
+.stories .flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.stories .flex-control-paging li a {
+	width: 11px;
+	height: 11px;
+	display: block;
+	background: #666;
+	background: rgba(0,0,0,0.5);
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	-o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.stories .flex-control-paging li a:hover {
+	background: #333;
+	background: rgba(0,0,0,0.7);
+}
+
+.stories .flex-control-paging li a.flex-active {
+	background: #000;
+	background: rgba(0,0,0,0.9);
+	cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+
+.stories .flex-direction-nav .flex-prev {
+	opacity: 1;
+	left: 10px;
+}
+
+.stories .flex-direction-nav .flex-next {
+	opacity: 1;
+	right: 10px;
+}
+
+}
+
+/* hero_slider
+*********************************/
+
+.hero_slider .flex-container a:active,
+.hero_slider a:active,
+.hero_slider .flex-container a:focus,
+.hero_slider a:focus {
+	outline: none;
+}
+
+.hero_slider .slides,
+.hero_slider .flex-control-nav,
+.hero_slider .flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+.hero_slider {
+	margin: 0;
+	padding: 0;
+}
+
+.hero_slider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.hero_slider .slides img {
+	width: 100%;
+	display: block;
+}
+
+.hero_slider .flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+.hero_slider .slides:after {
+	content: "\0020";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .hero_slider .slides {
+	display: block;
+}
+
+* html .slides {
+	height: 1%;
+}
+
+.no-js .hero_slider .slides > li:first-child {
+	display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+
+.hero_slider {
+	position: relative;
+	zoom: 1;
+}
+
+.hero_slider .flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.hero_slider.loading {
+	height: 700px;
+	background: #444 url(images/360-dark.gif)center no-repeat;
+}
+
+.hero_slider .slides {
+	zoom: 1;
+}
+
+/* Direction Nav */
+
+.hero_slider .flex-direction-nav {
+	*height: 0;
+}
+
+.hero_slider .flex-direction-nav a {
+	display: block;
+	width: 80px;
+	height: 95px;
+	margin: 0px 0 0;
+	position: absolute;
+	top: 43%;
+	z-index: 10;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 12px;
+	line-height: 65px;
+	border: none;
+	opacity: 1;
+}
+
+.eq-single .hero_slider .flex-direction-nav a {
+	top: 35%;
+}
+
+.hero_slider .flex-direction-nav .flex-prev {
+	left: 30px;
+	border-left: 0;
+}
+
+.hero_slider .flex-direction-nav .flex-next {
+	right: 30px;
+	text-align: center;
+	border-right: 0;
+}
+
+.hero_slider:hover .flex-prev {
+	left: 30px;
+}
+
+.hero_slider:hover .flex-next {
+	right: 30px;
+}
+
+.hero_slider:hover .flex-next:hover, .hero_slider:hover .flex-prev:hover {
+	opacity: 1;
+	background: #2980b9;
+	color: #fff;
+}
+
+.hero_slider .flex-direction-nav .flex-disabled {
+	opacity: 0!important;
+	filter: alpha(opacity=0);
+	cursor: default;
+}
+
+.hero_slider .flex-direction-nav a:before {
+	font-family: "flexslider-icon";
+	font-size: 12px;
+	display: inline-block;
+	content: '\f001';
+	color: #fff;
+}
+
+.hero_slider .flex-direction-nav a.flex-next:before {
+	content: '\f002';
+	color: #fff;
+}
+
+/* Pause/Play */
+
+.hero_slider .flex-pauseplay a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	opacity: 0.8;
+	z-index: 10;
+	overflow: hidden;
+	cursor: pointer;
+	color: #000;
+}
+
+.hero_slider .flex-pauseplay a:before {
+	font-family: "flexslider-icon";
+	font-size: 20px;
+	display: inline-block;
+	content: '\f004';
+}
+
+.hero_slider .flex-pauseplay a:hover {
+	opacity: 1;
+}
+
+.hero_slider .flex-pauseplay a.flex-play:before {
+	content: '\f003';
+}
+
+/* Control Nav */
+
+.hero_slider .flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 70px;
+	text-align: center;
+}
+
+.hero_slider .flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.hero_slider .flex-control-paging li a {
+	width: 8px;
+	height: 8px;
+	display: block;
+	background: #fff;
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.hero_slider .flex-control-paging li a:hover {
+	background: #444;
+}
+
+.hero_slider .flex-control-paging li a.flex-active {
+	background: #222;
+	cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+
+.hero_slider .flex-direction-nav .flex-prev {
+	opacity: 1;
+	left: 10px;
+}
+
+.hero_slider .flex-direction-nav .flex-next {
+	opacity: 1;
+	right: 10px;
+}
+
+}
+
+/* hero_slider
+*********************************/
+
+.footer_slider .flex-container a:active,
+.footer_slider a:active,
+.footer_slider .flex-container a:focus,
+.footer_slider a:focus {
+	outline: none;
+}
+
+.footer_slider .slides,
+.footer_slider .flex-control-nav,
+.footer_slider .flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+.footer_slider {
+	margin: 0;
+	padding: 0;
+}
+
+.footer_slider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.footer_slider .slides img {
+	width: 100%;
+	display: block;
+}
+
+.footer_slider .flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+.footer_slider .slides:after {
+	content: "\0020";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .footer_slider .slides {
+	display: block;
+}
+
+* html .slides {
+	height: 1%;
+}
+
+.no-js .footer_slider .slides > li:first-child {
+	display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+
+.footer_slider {
+	position: relative;
+	zoom: 1;
+}
+
+.footer_slider .flex-viewport {
+	max-height: 200px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.footer_slider.loading {
+	height: 200px;
+	background: #444 url(images/360-dark.gif)center no-repeat;
+}
+
+.footer_slider .slides {
+	zoom: 1;
+}
+
+/* Direction Nav */
+
+.footer_slider .flex-direction-nav {
+	*height: 0;
+}
+
+.footer_slider .flex-direction-nav a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin: 0px 0 0;
+	position: absolute;
+	top: 43%;
+	z-index: 10;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	padding-top: 0px;
+	line-height: 26px;
+	border: none;
+	opacity: 1;
+}
+
+.eq-single .footer_slider .flex-direction-nav a {
+	top: 35%;
+}
+
+.footer-top .footer_slider h3 {
+	margin-bottom: 20px;
+}
+
+.footer-top .footer_slider h3 a {
+	font-weight: 400 !important;
+	font-size: 25px !important;
+}
+
+.footer_slider .flex-direction-nav .flex-prev {
+	left: -47px;
+	border-left: 0;
+}
+
+.footer_slider .flex-direction-nav .flex-next {
+	right: -47px;
+	text-align: center;
+	border-right: 0;
+}
+
+.footer_slider:hover .flex-prev {
+	left: -47px;
+}
+
+.footer_slider:hover .flex-next {
+	right: -47px;
+}
+
+.footer_slider:hover .flex-next:hover, .footer_slider:hover .flex-prev:hover {
+	opacity: 1;
+	background: #2980b9;
+	color: #fff;
+}
+
+.footer_slider .flex-direction-nav .flex-disabled {
+	opacity: 0!important;
+	filter: alpha(opacity=0);
+	cursor: default;
+}
+
+.footer_slider .flex-direction-nav a:before {
+	font-family: "flexslider-icon";
+	font-size: 12px;
+	display: inline-block;
+	content: '\f001';
+	color: #fff;
+}
+
+.footer_slider .flex-direction-nav a.flex-next:before {
+	content: '\f002';
+	color: #fff;
+}
+
+/* Pause/Play */
+
+.footer_slider .flex-pauseplay a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	bottom: 5px;
+	left: 10px;
+	opacity: 0.8;
+	z-index: 10;
+	overflow: hidden;
+	cursor: pointer;
+	color: #2980b9;
+}
+
+.footer_slider .flex-pauseplay a:before {
+	font-family: "flexslider-icon";
+	font-size: 20px;
+	display: inline-block;
+	content: '\f004';
+}
+
+.footer_slider .flex-pauseplay a:hover {
+	opacity: 1;
+}
+
+.footer_slider .flex-pauseplay a.flex-play:before {
+	content: '\f003';
+}
+
+/* Control Nav */
+
+.footer_slider .flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: -50px;
+	text-align: center;
+}
+
+.footer_slider .flex-control-nav li {
+	margin: 0 6px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.footer_slider .flex-control-paging li a {
+	width: 9px;
+	height: 9px;
+	display: block;
+	background: #2980b9;
+	cursor: pointer;
+	text-indent: -9999px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.footer_slider .flex-control-paging li a:hover {
+	background: #fff;
+}
+
+.footer_slider .flex-control-paging li a.flex-active {
+	background: #fff !important;
+	cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+
+.footer_slider .flex-direction-nav .flex-prev {
+	opacity: 1;
+	left: 10px;
+}
+
+.footer_slider .flex-direction-nav .flex-next {
+	opacity: 1;
+	right: 10px;
+}
+
+}
+
+.footer_slider img {
+	max-width: 220px;
+	float: left;
+	margin-right: 30px;
+}
+
+.footer_slider h3 {
+	margin-top: 0;
+	line-height: 21px;
+}
+
+.footer_slider li {
+	
+}
