@@ -1,0 +1,144 @@
+/* @override http://themes.siiimple.com/newsgrid/wp-content/plugins/ishare_wpress/include/css/style.css?ver=3.6.1 */
+
+.ishare_wpress_inline_popup_btn img {
+  padding: 0px;
+  margin: 0px;
+  border: #fff 0px solid;
+}
+
+a.ishare_wpress_button.ishare {
+	color: #343434 !important;
+}
+
+a.ishare_wpress_button {
+ 
+   padding: 12px 14px;
+   -webkit-border-radius: 2px 2px;
+   -moz-border-radius: 2px 2px;
+   border: solid 1px rgb(153, 153, 153);
+   
+   color: #333 !important;
+   text-decoration: none;
+   cursor: pointer;
+   display: inline-block;
+   text-align: center;
+   text-shadow: 0px 1px 1px rgba(255,255,255,1);
+   line-height: 1;   
+}
+
+#ishare_holder {
+	display: none;
+	position: absolute;
+	z-index: 99999;
+	width: 360px;
+	font-size: 12px !important;
+	padding: 5px;
+	
+	border: 1px solid #eee;
+	background-color:#eee;
+	background-color: #eee;
+	
+	
+	
+}
+
+#ishare_title {
+  padding: 16px 16px 0px;
+  background: #fff;
+  
+
+  font-weight: bold;
+  
+  color: #333;
+}
+
+#ishare_close {
+  float: right;
+}
+
+#ishare_close a {
+  text-decoration: none;
+  color: #333;
+}
+
+#ishare_icons {
+  height: 100px;
+  overflow: auto;
+  padding: 5px;
+  background: #fff;
+}
+
+.ishare_icon {
+  width: 27%;
+  height: 18px;
+  padding: 5px;
+  margin: 3px 5px;
+  float: left;
+ 
+  
+  -moz-border-radius: 3px; /* Firefox */
+  -webkit-border-radius: 3px; /* Safari, Chrome */
+  border-radius: 3px; /* CSS3 */
+}
+
+.ishare_icon:hover {
+  background: #f2f2f2;
+  border: #e5e5e5 1px solid;
+}
+
+.ishare_icon img {
+  float: left;
+}
+
+#ishare_icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+.ishare_icon span {
+  margin-left: 5px;
+}
+
+#ishare_extras {
+  background: #f2f2f2;
+  padding: 2px;
+  padding-top: 10px;
+	padding-left: 10px;
+  -moz-border-radius-bottomleft: 5px; /* Firefox */
+  -moz-border-radius-bottomright: 5px; /* Firefox */
+  -webkit-border-bottom-left-radius: 5px; /* Safari, Chrome */
+  -webkit-border-bottom-right-radius: 5px; /* Safari, Chrome */
+  border-bottom-left-radius: 5px; /* CSS3 */
+  border-bottom-right-radius: 5px; /* CSS3 */
+  
+  border: #e5e5e5 1px solid;
+}
+
+#ishare_holder.ishare_top {
+
+}
+
+#ishare_holder.ishare_bottom {
+
+}
+
+#ishare_holder.ishare_right {
+
+}
+
+#ishare_holder.ishare_left {
+
+}
+
+
+#ishare_extras iframe {
+	width: 79px !important;
+	margin-right: 10px;
+}
+
+#ishare_extras #plusone-box  {
+	width: 70px !important;
+	margin-right: 0 !important;
+}
+

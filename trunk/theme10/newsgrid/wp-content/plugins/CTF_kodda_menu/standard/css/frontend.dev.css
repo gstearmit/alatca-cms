@@ -1,0 +1,298 @@
+/*********************************************************************************************************
+ * 
+ * Kodda Menu
+ * 
+ * @author Taieb Sabri (codetemp), http://codetemp.com
+ *
+ * Last Update 2013-08-30
+ * 
+ /*********************************************************************************************************/
+
+
+/** =General **/
+.fr { float: right }
+.fl { float: left; }
+.kodda_clearfix {
+	clear:both !important; 
+	overflow: hidden !important; 
+	width: 0px !important; 
+	margin: 0px !important; 
+	padding: 0px !important 
+}
+
+#kodda_container {
+	position: relative;
+	display: block;
+	padding: 0px !important;
+	
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: auto ;
+	margin-right: auto;
+
+    /* Prevent background color leak outs */
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip:    padding; 
+    background-clip:         padding-box;
+}
+
+/** =Menus **/
+.kodda_menu {
+	float: left;
+	display: block;
+	height: auto;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+	.kodda_submenu {
+		display: none;
+		position: absolute;
+		width: 100%;
+	}
+	.kodda_menu_dropdowns .kodda_submenu,
+	.kodda_menu_links .kodda_submenu,
+	.kodda_menu_posts .kodda_submenu {
+		left: 0px;
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+	.kodda_menu_links .kodda_submenu,
+	.kodda_menu_posts .kodda_submenu,
+	.kodda_menu_html .kodda_submenu {
+		overflow: hidden;
+	}
+
+
+/** =Posts **/
+.kodda_submenu_posts_categories {
+	float: left;
+	overflow: hidden;
+	text-align: right;
+}
+	.kodda_submenu_posts_categories a{
+		display: block;
+		text-decoration: none !important;
+		position: relative;
+	}
+		.kodda_submenu_posts_categories a .ct_font_box {
+			position: absolute;
+		}
+.kodda_submenu_posts_all_posts {
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+	.kodda_submenu_posts_all_posts div.kodda_posts_cat_container{
+		float: left;
+		display: inline;
+	}
+	.kodda_submenu_posts_all_posts a,
+	.kodda_resp_posts_cat_container a {
+		float: left;
+		display: inline-block;
+		overflow: hidden;
+	}
+		.kodda_submenu_posts_all_posts span,
+		.kodda_resp_posts_cat_container span {
+			display: inline-block;
+			line-height: 1.2em;
+		}
+			.kodda_submenu_posts_all_posts span:hover ,
+			.kodda_resp_posts_cat_container span:hover {
+				text-decoration: underline;
+			}
+
+/** =Links **/
+.kodda_submenu_links_column {
+	float: left;
+	overflow: hidden;
+}
+	.kodda_submenu_links_column_title,
+	.kodda_submenu_links_column_links{
+		display: block;
+		text-decoration: none !important;
+	}
+		.kodda_submenu_links_column_links .ct_font_box{
+			margin-right: 8px;
+		}
+
+
+/** =Dropdown **/
+.kodda_menu_dropdowns .kodda_submenu {
+	position: absolute;
+}
+.kodda_submenu_dropdown_level_one{
+	position: relative;
+}
+	.kodda_submenu_dropdown_level_one a {
+		display: block;
+		text-decoration: none !important;
+	}
+	.kodda_submenu_dropdown_level_one .ct_font_box{
+		position: absolute;
+	}
+		.kodda_submenu_dropdown_level_two {
+			overflow: hidden;
+			display: none;
+			position: absolute;
+			top: 0px;
+		}
+			.kodda_submenu_dropdown_level_two a {
+				text-decoration: none !important;
+			}
+
+/* =HTML */
+.kodda_menu_html .kodda_submenu {
+	line-height: 1em;
+}
+
+
+/* Site Title & Logo */
+.kodda_title_container a {
+	text-decoration: none;
+	display:inline-block;
+	float: left;
+}
+
+.kodda_top_link_right_border {
+	display: block;
+	overflow: hidden;
+	float: left;
+}
+.kodda_top_link_left_border {
+	display: block;
+	overflow: hidden;
+	float: left;
+}
+
+
+/** Top Level Links **/
+.kodda_top_link {
+	float: left;
+}
+.kodda_top_link,
+.kodda_resp_top_link,
+.kodda_resp_posts_cat,
+.kodda_resp_submenu_links_column_title,
+.kodda_resp_submenu_links_links a {
+	line-height: 1em;
+	display:block;
+	position: relative;
+	text-decoration: none !important;
+
+	/* CSS3 Transition */
+	-webkit-transition: all 054s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transition: all 0.5s;
+}
+	.kodda_top_link .ct_font_box,
+	.kodda_resp_top_link .ct_font_box,
+	.kodda_resp_posts_cat .ct_font_box ,
+	.kodda_resp_submenu_links_column_title .ct_font_box{
+		position:absolute !important;
+	}
+.kodda_top_link_same_padding .ct_font_box,
+.kodda_resp_top_link_same_padding .ct_font_box{
+	display: none !important;
+}
+
+
+/** =Social Icons **/
+.kodda_social_container {
+	float: right;
+}
+	.kodda_social_link {
+		display: inline-block;
+		position: relative;
+	}
+		.kodda_social_tooltip {
+			display: none;
+			position: absolute;
+			right: 0px;
+			white-space:nowrap;
+
+		}
+			.kodda_social_tooltip .ct_font_box{
+				position: absolute;
+				top: -12px;
+				font-size: 17px !important;
+			}
+
+
+/** =Search Form **/
+.kodda_search_container {
+	position: relative;
+	float: right;
+}
+	.kodda_search_form {
+		position: relative;
+	}
+		.kodda_search_buttom {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin: 0px !important;
+			cursor: pointer;
+			position: absolute;
+
+			/* color/bg/border */
+			border: none;
+			outline: none;
+		}
+		.kodda_search_input{
+			border: none;
+			outline: none;
+			padding: 0px;
+			margin: 0px;
+		}
+
+/** =Responsive **/
+.kodda_responsive {
+		padding: 0px !important;
+		margin: 0px !important; 
+		display: none;
+		float: left;
+}
+	.kodda_responsive > .ct_font_box{
+		cursor: pointer;
+		display: inline-block !important;
+	}
+	.kodda_responsive_content {
+		display: none;
+		position: absolute;
+		left: 0px;
+		overflow: hidden;
+	}
+	.kodda_resp_top_link,
+	.kodda_resp_posts_cat,
+	.kodda_resp_submenu_links_column_title,
+	.kodda_resp_submenu_links_links a {
+		display: block !important;
+		float: none !important;
+		position: relative ;
+	}
+		.kodda_resp_top_link .ct_font_box,
+		.kodda_resp_posts_cat .ct_font_box,
+		.kodda_resp_submenu_links_column_title .ct_font_box {
+			position: absolute;
+		}
+
+	.kodda_resp_submenu,
+	.kodda_resp_posts_cat_container,
+	.kodda_resp_submenu_links_links {
+		display: none;
+	}
+		.kodda_resp_top_link > .ct_font_box {
+			cursor:pointer;
+		}
+
+	.kodda_resp_posts_cat_container a{
+		overflow: hidden;
+		text-decoration: none;
+	}
+	
+		.kodda_resp_posts_cat_container span{
+			display: inline-block;
+			clear: both;
+		}

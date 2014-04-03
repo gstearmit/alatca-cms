@@ -1,0 +1,47 @@
+/*********************************************************************************************************
+ * 
+ * Kodda Menu
+ * 
+ * @author Taieb Sabri (codetemp), http://codetemp.com
+ *
+ * Last Update 2013-08-30
+ * 
+ /*********************************************************************************************************/
+
+/** Classic Responsive System **/
+
+/** =Responsive Media Query **/
+
+/* Smaller than 1024 */
+@media only screen and (max-width: 1023px) {
+
+	.kodda_menu_mobile {
+		display: none !important;
+	}
+
+	.kodda_responsive {
+		display: block;
+	}
+
+}
+
+/* Smaller than 750 */
+@media only screen and (max-width: 749px) {
+	/* Social Media */
+	.kodda_social_container { display: none !important; }
+}
+
+/* Smaller than 650 */
+@media only screen and (max-width: 649px) {
+
+	/* Responsive Container */
+	.kodda_responsive { float: right !important; }
+
+	/* Search Container */
+	.kodda_search_container { display: none !important; }
+
+	/* Hide Title Right Border */
+	.kodda_title_container .kodda_top_link_right_border{
+		display: none !important;
+	}
+}
