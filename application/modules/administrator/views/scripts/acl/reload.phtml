@@ -1,0 +1,9 @@
+<?php 
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		echo '<div class="ub_message">Done</div>';
+	}elseif($status == "-1"){
+		echo '<div class="ub_message"><span>Processing</span></div>';
+	}
+?>

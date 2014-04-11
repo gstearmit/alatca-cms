@@ -1,0 +1,122 @@
+<?php 
+	$pki 		= $this->pki;
+	$status	  	= $this->status;
+	$message  	= null;
+	if($status == 1){
+		$message = '<div class="ub_message">The data has been updated</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>There are some error dring update time!</span></div>';
+	}
+	$item_status = (int)@$pki['item_status'];
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Add/Update feature of the package</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        Package items
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/packageitem/update" accept-charset="UTF-8">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                        <div class='form-group'>
+                        <label class='col-md-3 control-label'>Package</label>
+                        <div class='col-md-9'>
+                        	<?php echo $this->package;?>
+                        </div>
+                      </div>
+                        <div class='form-group'>
+                        <label class='col-md-3 control-label' for='item_name'>Feature</label>
+                        <div class='col-md-9'>
+                        	<input type="text" class='form-control' id="item_name" name="item_name" value="<?php echo @$pki['item_name'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='item_status'>Status</label>
+                        <div class='col-md-9'>
+                        	<?php if($item_status == 3){?>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="1" /> No
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="2" /> Yes
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="3"  checked="checked"/> Plus item
+                        	</label>
+                        	<?php }else if($item_status == 2){?>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="1" /> No
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="2" checked="checked" /> Yes
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="3" /> Plus item
+                        	</label>
+                        	<?php }else{?>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="1" checked="checked" /> No
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="2" /> Yes
+                        	</label>
+                        	<label class="radio radio-inline">
+                        		<input type="radio" id="item_status" name="item_status" value="3" /> Plus item
+                        	</label>
+                        	<?php } ?>
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='item_status' placeholder='Page URL'>Order</label>
+                        <div class='col-md-2'>
+                        	<input type="text" class='form-control' id="item_order" name="item_order" value="<?php echo @$pki['item_order'];?>"  />
+                        </div>
+                        <div class='col-md-7'></div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='description'>Description</label>
+                        <div class='col-md-9'>
+                        	<textarea  class='form-control' rows="10" type="text" id="description" name="description"><?php echo @$pki['description'];?></textarea>
+                        </div>
+                      </div>
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' onclick="return validateData()" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/note';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

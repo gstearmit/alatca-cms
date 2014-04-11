@@ -1,0 +1,102 @@
+<?php 
+    $objUtil = new HT_Model_administrator_models_utility();
+	$note = $this->note;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">The data has been updated</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Note key is already exists! Please choice other key.</span></div>';
+	}
+	$active = (int)@$note['active'];
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Add/Update a note</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        Note page
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/note/update" accept-charset="UTF-8">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='note_key'>Note group</label>
+                        <div class='col-md-9'>
+                        	<?php echo $this->noteGroup; 
+                        	       //var_dump($this->noteGroup);
+                        	       //print_r($this->noteGroup);
+                        	       ?>
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='note_key'>Note key</label>
+                        <div class='col-md-9'>
+                        	<input type="text" class='form-control' id="note_key" name="note_key" placeholder='Note key' value="<?php echo @$note['note_key'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='note_title' placeholder='Page URL'>Note title</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="text" id="note_title" name="note_title" value="<?php echo @$note['note_title'];?>" />
+                        </div>
+                      </div>
+                      <!--  
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='description'>Description</label>
+                        <div class='col-md-9'>
+                        	<textarea  class='form-control' rows="10" type="text" id="description" name="description"><?php //echo @$note['description'];?></textarea>
+                        </div>
+                      </div>
+                      -->
+                      
+                      
+                       <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''> Description</label>
+                       </div>
+                       <div class='form-group' style = " margin: 0px 20px 0px 20px ; " >
+                           <textarea type="text" id="description" name="description"><?php echo stripcslashes(@$note['description']);?></textarea>
+                           <?php $objUtil->renderCkeditor('description',400)?>
+                       </div>
+                       
+                       
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' onclick="return validateData()" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/note';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

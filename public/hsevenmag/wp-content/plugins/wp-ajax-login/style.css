@@ -1,0 +1,224 @@
+/* RESET STYLE */
+
+#ajax-login-wrap * {
+	color: #666;
+	background-image: none;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.625;
+	padding: 0;
+	border: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	margin: 0;
+	vertical-align: baseline;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	outline: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	word-wrap: break-word;
+}
+
+/* Ajax Login Style */
+
+#ajax-login-wrap {
+	max-width: 240px;
+	color: #666; 
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #fcfcfc;
+	border: 1px solid #C6C6C6;
+	overflow: hidden;
+}
+
+#ajax-login-wrap #ajax-login-tabs {
+	width: 100%;
+	margin: 0;
+	border-bottom: 1px solid #c6c6c6;
+	height: auto;
+	overflow: hidden;
+}
+
+#ajax-login-tabs .ajax-login-tab {
+	display: block;
+	float: left;
+	width: 50%;
+	padding: 10px 0;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	color: #999;
+	background-color: #e6e6e6;
+}
+
+#ajax-login-tabs .ajax-login-tab.selected, #ajax-login-wrap #ajax-login-tabs .ajax-login-tab:hover {
+	background-color: #fcfcfc;
+	color: #666;
+}
+
+#ajax-login-content-tab {
+	padding: 10px;
+}
+
+#ajax-login-content-tab .ajax-login-form-wrap {
+	display: none;
+}
+
+#ajax-login-content-tab p {
+	margin-bottom: 5px;
+}
+
+#ajax-login-content-tab a {
+	color: #1982D1;
+	outline: none;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+#ajax-login-content-tab  h3 {
+	font-weight: bold;
+}
+
+#ajax-login-content-tab h2 {
+	color: #555;
+	font-weight: 200;
+	font-size: 18px;
+	line-height: 1.625;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#ajax-login-content-tab input[type="text"], #ajax-login-content-tab input[type="password"], #ajax-login-content-tab input[type="email"] {
+	color: #555;
+	font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	width: 100%;
+	border: 1px solid #ccc;
+	outline: 0;
+	padding: 5px 0;
+	text-indent: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: #fff;
+}
+
+#ajax-login-content-tab input[type="text"]:hover, #ajax-login-content-tab input[type="password"]:hover, #ajax-login-content-tab input[type="email"]:hover {
+	border: 1px solid #999;
+}
+
+#ajax-login-content-tab input:-moz-placeholder, #ajax-login-content-tab input::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+#ajax-login-content-tab input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+#ajax-login-content-tab input[type="submit"], #ajax-login-user a, #ajax-recaptcha-container a {
+	width: 100%;
+	text-align: center;
+    text-decoration: none;
+    color: #666; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+	background-color: #F8F8F8;	
+	border: 1px solid #C6C6C6;
+	padding: 4px 10px;
+	line-height: 1.625;
+}
+
+#ajax-login-content-tab input[type="submit"]:hover, #ajax-login-user a:hover, #ajax-recaptcha-container a:hover {
+	background-color: #F8F8F8;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#F8F8F8),to(#ECECEC));
+	background-image: -webkit-linear-gradient(top,#F8F8F8,#ECECEC);
+	background-image: -moz-linear-gradient(top,#F8F8F8,#ECECEC);
+	background-image: -ms-linear-gradient(top,#F8F8F8,#ECECEC);
+	background-image: -o-linear-gradient(top,#F8F8F8,#ECECEC);
+	background-image: linear-gradient(top,#F8F8F8,#ECECEC);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#ececec');
+	border: 1px solid #B6B6B6;
+	cursor:pointer;
+}
+
+#ajax-login-show-error {
+	background-color: #FFE69C;
+	color: #9D7B11;
+	max-width: 220px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin: 5px 0px;
+	text-align: left;
+	border: 1px solid;
+	border-color: #9D7B11;
+	padding: 10px;
+	display: none;
+}
+
+#ajax-login-show-error strong{
+	color:  #9D7B11;
+}
+
+#ajax-login-wrap #ajax-login-user {
+	padding: 10px;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+#ajax-login-user .avatar {
+	margin: 0;
+	max-width: 100%;
+	height: auto;
+	-moz-box-shadow: 0px 1px 3px 0px #000 !important;
+	-webkit-box-shadow: 0px 1px 3px 0px #000 !important;
+	box-shadow: 0px 1px 3px 0px #000 !important;
+}
+
+#ajax-login-user h1 {
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#ajax-login-user a {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 2px;
+	padding: 4px 0;
+}
+
+/* RECAPTCHA */
+
+#ajax-recaptcha-container {
+	margin: 10px 0;
+}
+
+#ajax-recaptcha-container #recaptcha_image {
+	max-width: 100%;
+	height: 57px;
+	border: 1px solid #ccc;
+	border-bottom: 0;
+}
+
+#ajax-recaptcha-container #recaptcha_image img {
+	max-width: 100%;
+	height: 57px;
+}
+
+#ajax-recaptcha-container a {
+	display: block;
+	padding: 5px 0;
+	margin-bottom: 5px;
+}

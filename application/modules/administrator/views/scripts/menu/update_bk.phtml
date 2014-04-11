@@ -1,0 +1,68 @@
+<?php 
+	$menu = $this->menu;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Menu URL đã tồn tại. Vui lòng kiểm tra lại!</span></div>';
+	}elseif($status == "-2"){
+		$message = '<div class="ub_message"><span>Không tìm được module tương ứng. Vui lòng chạy Reload ACL trước khi cập nhật module.</span></div>';
+	}
+	if(isset($menu['menu_order'])){
+		$menu_order = $menu['menu_order'];
+	}else{
+		$menu_order = 10;
+	}
+?>
+<form id="frmUpdate" name="frmUpdate" method="post" action="<?php echo WEB_PATH;?>/administrator/menu/update">
+<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+<input type="hidden" id="do" name="do" value="submit" />
+<article class="module width_full">
+<header>
+  <h3 class="tabs_involved">Thêm mới / cập nhật left menu</h3>
+	<div class="functionBtnEvent">
+		<ul>
+		  <li><a href="<?php echo WEB_PATH;?>/administrator/menu">Quay lại trang quản lý</a></li>
+		</ul>
+	</div>
+</header>
+<div class="module_content">
+	<div class="update_box">
+		<div class="ub_left fl">Nhóm menu</div>
+		<div class="ub_right fl"><?php echo $this->menugroup?></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Menu URL</div>
+		<div class="ub_right fl"><input type="text" id="menu_url" name="menu_url" value="<?php echo @$menu['menu_url'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl"></div>
+		<div class="ub_right fl"><span>Ví dụ: </span>http://localhost/wish/administrator/news hoặc http://wish.vn/administrator/news</div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Tên menu</div>
+		<div class="ub_right fl"><input type="text" id="menu_name" name="menu_name" value="<?php echo @$menu['menu_name'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl"></div>
+		<div class="ub_right fl"><span>Ví dụ: </span>Danh sách tin tức</div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Vị trí menu</div>
+		<div class="ub_right fl"><input type="text" id="menu_order" name="menu_order" value="<?php echo $menu_order;?>" /></div>
+		<div class="cb"></div> 
+		<div class="ub_left fl"></div>
+		<div class="ub_right fl">Số càng lớn thì vị trí càng cao trong nhóm menu. Nên đặt trong khoảng từ 10 đến 100.</div>
+		<div class="cb"></div>
+		<div class="ub_button_list">
+			<div id="cancel" class="ub_button fl">
+				<a href="<?php echo WEB_PATH.'/administrator/menu';?>">Quay lại</a>
+			</div>
+			<div onclick="return validateData()" class="ub_button fl">
+				Lưu lại
+			</div>
+			<div class="cb"></div>
+		</div>
+		<div class="cb"></div>
+		<?php echo $message;?>
+	</div>
+</div>
+</article>
+<div class="clear"></div>
+</form>

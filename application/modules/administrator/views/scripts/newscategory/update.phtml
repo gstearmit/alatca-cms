@@ -1,0 +1,106 @@
+<?php 
+	$newscategory = $this->newscategory;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+	$active = (int)@$newscategory['active'];
+?>
+
+<div class="row" style=" height: 16px;"></div>
+
+<div class="row">
+                <div class="col-sm-12">
+                  <div class="box">
+                    <div class="box-header blue-background">
+                      <div class="title">Thêm mới / Cập nhật loại tin</div>
+                      <div class="actions">
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class="icon-remove"></i> </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i> </a>
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <form  class="form form-horizontal validate-form" style="margin-bottom: 0;" novalidate="novalidate" id="frmUpdate" name="frmUpdate" method="post" action="<?php echo WEB_PATH;?>/administrator/newscategory/update">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        
+						<div class="form-group">
+                          <label class="control-label col-sm-3" for="validation_select">Nhóm tin</label>
+                          <div class="col-sm-4 controls">
+                            <!-- 
+                             <select class="form-control" data-rule-required="true" id="validation_select" name="validation_select">
+                              <option></option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                            -->
+                            <?php echo $this->newsGroup;?>
+                          </div>
+                        </div>
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Tên loại tin</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control'   id='category_name' name='category_name' placeholder='Tên loại tin' type='text' value="<?php echo @$newscategory['category_name'];?>">
+                          </div>
+                        </div>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Kích hoạt'>Kích hoạt</label>
+                          <div class='col-sm-4 controls'>
+                          
+                            <?php if($active == 1){?>
+								<input   type="radio" name="active" value="1" checked="checked" /> Có <input type="radio" name="active" value="0" /> Không 
+								<?php }else{?>
+								<input  type="radio" name="active" value="1" /> Có <input type="radio" name="active" value="0" checked="checked" /> Không 
+								<?php }?>
+						 
+                          </div>
+                        </div>
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Thứ tự sắp xếp ưu tiên</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control' id='stt' name='stt' placeholder='Thứ tự sắp xếp ưu tiên' type='text' value="<?php echo @$newscategory['stt'];?>">
+                          </div>
+                        </div>
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Mô tả thêm về loại tin'>Mô tả thêm về loại tin</label>
+                          <div class='col-sm-4 controls'>
+                            <textarea class='form-control' id='description' name='description' type='text'> <?php echo @$newscategory['description'];?></textarea>
+                          </div>
+                        </div>
+                       
+                        
+                       <div class='form-actions' style='margin-bottom:0'>
+                          <div class='row'>
+                           <div class="col-sm-4"></div>
+                            <div class='col-sm-2'>
+                              <button class='btn btn-primary ub_button fl' type='submit' onclick="return validateData()" >
+                                <i class='icon-save'></i>
+                                Lưu lại
+                              </button>
+                             
+                            </div>
+                            <div class="col-sm-2">
+                              <button style="margin-left: -45px;" id="cancel" class='btn ub_button fl' type='submit'>
+                                <i class='icon-remove'></i>
+                               <a href="<?php echo WEB_PATH.'/administrator/newscategory';?>">Hủy</a>
+                              </button>
+                            </div>
+                            <div class="col-sm-4"></div>
+                          </div>
+                        </div>
+                        
+                        <?php echo $message;?>
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+ </div>
+

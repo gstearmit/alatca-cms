@@ -1,0 +1,192 @@
+.text-market-030 {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+color:#4e4e4e;
+margin: 0px;
+}
+.text-market-030 img {float:left;}
+.text-market-030 span {
+float: right;
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+color: #4E4E4E;
+margin-left: 10px;
+margin-top: 6px;
+}
+.del-padding{padding:0px;}
+.del-padding-5px {padding:0px 0px 0px 5px;}
+.del-margin { margin:0px;}
+#page-01-tablette-of-hei {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 734px;
+}
+.text-left-maketting {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+margin: 0px;
+}
+h3.text-left-maketting {margin: 0px;}
+.icon-martketting.re-tkiem {
+position: relative;
+}
+.icon-martketting.re-tkiem-edit {
+position: relative;
+top: -10px;
+}
+.img-mart img { width:634px; height:369px; }
+
+#giaiphap-01-martket {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+#page-01-martk {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+min-height: 465px;
+}
+.img-mart-02 img {
+	width:632px;
+	height:368px;
+	background-color:#fff;
+	border-radius:6px;
+	padding: 8px 8px 8px 8px;
+}
+.img-mart-02 {
+padding-left: 6%;
+}
+#home-page-01-mart {
+background: url("../img/bg-giaiphap.png") repeat !important;
+}
+.col-md-12.left-page-index-mart {
+margin-left: -13px;
+}
+
+.img-mart-03 img {
+	width:463px;
+	height:323px;
+	background-color:#fff;
+	border-radius:6px;
+	padding: 8px 8px 8px 8px;
+}
+.img-mart-03 {
+padding-left: 0%;
+}
+#page-04-martket-0 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 90px;
+}
+#p-05-martket{
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 436px;
+}
+.view-mart-07 {
+min-height: 240px;
+float: left;
+}
+.padd-l-mart {
+float: left;
+}
+.img-table-05 {
+background-color: #FFF;
+border-radius: 7px;
+height: 269px;
+padding: 8px;
+width: 583px;
+margin-top: 44px;
+}
+.col-md-12.iphone-martk-02 {
+float: left;
+}
+.view-p-mart-04 {
+min-height: 240px;
+float: left;
+}
+.iphone-p-01-mart {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+}
+.iphone-p-05-mart {
+background-color: #4fbdd9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+}
+.iphone-p-05-mart a {
+background-color: #4fbdd9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+}
+.iphone-p-05-mart a:hover {
+background-color: #4fbdd9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+}
+.img-table-05 img {
+height: 247px;
+padding: 8px;
+width: 590px;
+}
+#gp-page-06-market {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 117px;
+}
+.col-md-12.text-left-tablete {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+}
+
+.text-left-tablete {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+}
+#giaiphap-maket {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 478px;
+}

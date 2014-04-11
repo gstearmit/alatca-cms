@@ -1,0 +1,182 @@
+<?php
+
+function chuyenDoi($cs, $tolower = false) {
+    /* Mảng chứa tất cả ký tự có dấu trong Tiếng Việt */
+    $marTViet = array("à", "á", "ạ", "ả", "ã", "â", "ầ", "ấ", "ậ", "ẩ", "ẫ", "ă",
+        "ằ", "ắ", "ặ", "ẳ", "ẵ", "è", "é", "ẹ", "ẻ", "ẽ", "ê", "ề",
+        "ế", "ệ", "ể", "ễ",
+        "ì", "í", "ị", "ỉ", "ĩ",
+        "ò", "ó", "ọ", "ỏ", "õ", "ô", "ồ", "ố", "ộ", "ổ", "ỗ", "ơ",
+        "ờ", "ớ", "ợ", "ở", "ỡ",
+        "ù", "ú", "ụ", "ủ", "ũ", "ư", "ừ", "ứ", "ự", "ử", "ữ",
+        "ỳ", "ý", "ỵ", "ỷ", "ỹ",
+        "đ",
+        "À", "Á", "Ạ", "Ả", "Ã", "Â", "Ầ", "Ấ", "Ậ", "Ẩ", "Ẫ", "Ă",
+        "Ằ", "Ắ", "Ặ", "Ẳ", "Ẵ",
+        "È", "É", "Ẹ", "Ẻ", "Ẽ", "Ê", "Ề", "Ế", "Ệ", "Ể", "Ễ",
+        "Ì", "Í", "Ị", "Ỉ", "Ĩ",
+        "Ò", "Ó", "Ọ", "Ỏ", "Õ", "Ô", "Ồ", "Ố", "Ộ", "Ổ", "Ỗ", "Ơ", "Ờ", "Ớ", "Ợ", "Ở", "Ỡ",
+        "Ù", "Ú", "Ụ", "Ủ", "Ũ", "Ư", "Ừ", "Ứ", "Ự", "Ử", "Ữ",
+        "Ỳ", "Ý", "Ỵ", "Ỷ", "Ỹ",
+        "Đ", " ", ",", "?", ")", "(", ":", "!", "*", "&", "%", "$", "@", "`", "~");
+
+    /* Mảng chứa tất cả ký tự không dấu tương ứng với mảng $marTViet bên trên */
+    $marKoDau = array("a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a",
+        "a", "a", "a", "a", "a", "a",
+        "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+        "i", "i", "i", "i", "i",
+        "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o", "o",
+        "o", "o", "o", "o", "o",
+        "u", "u", "u", "u", "u", "u", "u", "u", "u", "u", "u",
+        "y", "y", "y", "y", "y",
+        "d",
+        "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A",
+        "A", "A", "A", "A", "A",
+        "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E",
+        "I", "I", "I", "I", "I",
+        "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O", "O",
+        "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U",
+        "Y", "Y", "Y", "Y", "Y",
+        "D", "-", "", "", "", "", "", "", "", "", "", "", "", "", "");
+
+    if ($tolower) {
+        return strtolower(str_replace($marTViet, $marKoDau, $cs));
+    }
+
+    return str_replace($marTViet, $marKoDau, $cs);
+}
+
+$index = 0;
+foreach ($this->listcate as $keyCate => $dataCate) {
+    if ($index < 4) {
+        if ($keyCate == 0) {
+            echo "<div class = 'b_title'><h4><a href = '".WEB_PATH."Chuyen-muc/".chuyenDoi($dataCate["category_name"])."-".$dataCate["id_category"].".html'>" . $dataCate["category_name"] . "</a></h4></div>";
+            $titleCate = chuyenDoi($dataCate["category_name"]);
+            echo "<div class = 'b_block b_2 clearfix'>" .
+            "<div class = 'b2_minus'>";
+            foreach ($this->ListHomeNews[$index] as $keyId => $data) {
+                $auth = $data["firstname"] . " " . $data["lastname"];
+                $titleNews = chuyenDoi($data["title_en"]);
+                if ($keyId == 2) {
+                    break;
+                }
+                echo "<div class = 'def_wgr'>" .
+                "<div class = 'item wgr T_post'>" .
+                "<div class = 'featured_thumb'>" .
+                "<a class = 'first_A' href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = ''>" .
+                "<img src = '" . WEB_PATH . $data["imagesVuong"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '255' height = '280' />" .
+                "<span class = 'thumb-icon small'><i class = 'icon-forward'></i></span>" .
+                "<h3>" . $data["title_en"] . "</h3>" .
+                "</a>" .
+                "</div>" .
+                "<div class = 'details'>" .
+                "<span class = 's_category'>" .
+                "<a href = '#'><i class = 'icon-calendar mi'></i>" . date('d-m-Y',strtotime($data["creates"])) . "</a>" .
+                "<a href = 'h#'><i class = 'icon-user mi'></i>" . $auth . "</a>" .
+                "</span>" .
+                "</div>" .
+                "</div>" .
+                "</div>";
+            }
+            echo"</div></div>";
+        }
+        if ($keyCate == 1) {
+            echo "<div class = 'b_title'><h4><a href='".WEB_PATH."Chuyen-muc/".chuyenDoi($dataCate["category_name"])."-".$dataCate["id_category"].".html'><span>" . $dataCate["category_name"] . "</span></a></h4></div>";
+            echo "<div class = 'b_block b_3 clearfix'>";
+            $titleCate = chuyenDoi($dataCate["category_name"]);
+            foreach ($this->ListHomeNews[$index] as $keyId => $data) {
+                $auth = $data["firstname"] . " " . $data["lastname"];
+                $titleNews = chuyenDoi($data["title_en"]);
+                if ($keyId == 0) {
+                    //anh to dau tien
+                    echo "<div class = 'grid_6 alpha first_post'>" .
+                    "<div class = 'first_news_pic'><div class = 'item wgr T_post'><div class = 'featured_thumb'>" .
+                    "<a class = 'first_A' href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = ''>" .
+                    "<img src = '" . WEB_PATH . $data["imagesVuong"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '255' height = '245' />" .
+                    "<span class = 'thumb-icon small'><i class = 'icon-forward'></i>" .
+                    "</span><h3>" . $data["title_en"] . "</h3></a></div>" .
+                    "<div class = 'details'><span class = 's_category'>" .
+                    "<a href = '#'><i class = 'icon-calendar mi'></i>" . date('d-m-Y',strtotime($data["creates"])) . "</a>" .
+                    "<a href = '#'><i class = 'icon-user mi'></i>" . $auth . "</a></span>" .
+                    "<span class = 'more_meta'><a href = '#'>" .
+                    "<i class = 'icon-message mi'></i>0</a>" .
+                    "</span></div></div></div>";
+                    //end anh to dau tien
+                    echo "<div class = 'grid_6 omega more_posts'>";
+                } else {
+                    echo "<div class = 'T_post'>" .
+                    "<div class = 'more_news_pic featured_thumb'><a href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark'>" .
+                    "<img class = 'toptip' src = '" . WEB_PATH . $data["imagesVuong"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '80' height = '80' />" .
+                    "<span class = 'thumb-icon small toptip' title = '" . $data["title_en"] . "'>" .
+                    "<i class = 'icon-forward'></i></span></a></div></div></div>";
+                }
+            }
+            echo"</div></div>";
+        }
+        if ($keyCate == 2) {
+            echo "<div class = 'b_title'><h4><a href = '".WEB_PATH."Chuyen-muc/".chuyenDoi($dataCate["category_name"])."-".$dataCate["id_category"].".html'>" . $dataCate["category_name"] . "</a></h4></div>";
+            echo"<div class = 'b_block b_4'><div id = 'block_carousel' class = 'carousel_posts_block owl-carousel'>";
+            //lap
+            $titleCate = chuyenDoi($dataCate["category_name"]);
+            foreach ($this->ListHomeNews[$index] as $keyId => $data) {
+                $titleNews = chuyenDoi($data["title_en"]);
+                echo "<div class = 'item T_post'><div class = 'featured_thumb'>" .
+                "<a href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = '" . $data["title_en"] . "'>" .
+                "<img src = '" . WEB_PATH . $data["imagesWidth"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '255' height = '180' />" .
+                "<span class = 'thumb-icon small'><i class = 'icon-forward'></i></span> </a></div>" .
+                "<div class = 'details'><a href = '#'><i class = 'icon-calendar mi'></i>" . date('d-m-Y',strtotime($data["creates"])) . "</a></div></div></div>";
+                //end lap
+            }
+            echo"</div></div>";
+        }if ($keyCate == 3) {
+            echo"<div class = 'b_title'><h4><a href = '".WEB_PATH."Chuyen-muc/".chuyenDoi($dataCate["category_name"])."-".$dataCate["id_category"].".html'>" . $dataCate["category_name"] . "</a></h4></div>";
+            echo "<div class = 'b_block b_1 clearfix'>";
+            $titleCate = chuyenDoi($dataCate["category_name"]);
+            foreach ($this->ListHomeNews[$index] as $keyId => $data) {
+                $titleNews = chuyenDoi($data["title_en"]);
+                $auth = $data["firstname"] . " " . $data["lastname"];
+                if ($keyId == 5) {
+                    break;
+                }
+                //anh to
+                if ($keyId == 0) {
+                    echo" <div class = 'first_post grid_6 alpha'>" .
+                    "<div class = 'item wgr T_post'>" .
+                    "<div class = 'featured_thumb'>" .
+                    "<a class = 'first_A' href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = '" . $data["title_en"] . "'>" .
+                    "<img src = '" . WEB_PATH . $data["images"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '255' height = '333' />" .
+                    "<span class = 'thumb-icon small'><i class = 'icon-forward'></i></span>" .
+                    "<h3>Beautiful lettering of yesteryear</h3></a></div>" .
+                    "<div class = 'details'><span class = 's_category'>" .
+                    "<a href = 'hsevenmag/?p=88'><i class = 'icon-calendar mi'></i>" . date('d-m-Y',strtotime($data["creates"])) . "</a>" .
+                    "<a href = 'hsevenmag/?author=1'><i class = 'icon-user mi'></i>" . $auth . "</a>" .
+                    "</span>" .
+                    "<span class = 'more_meta'><a href = '#'><i class = 'icon-message mi'></i>0</a>" .
+                    "</span></div></div></div>";
+                    echo "<div class = 'more_posts grid_6 omega'>";
+                    //end anh to
+                } else {
+                    echo "<div class = 'item_small T_post'>" .
+                    "<div class = 'featured_thumb'><a href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = '" . $data["title_en"] . "'>" .
+                    "<img src = '" . WEB_PATH . $data["imagesVuong"] . "' alt = '" . $data["title_en"] . "' title = '" . $data["title_en"] . "' width = '80' height = '80' />" .
+                    "<span class = 'thumb-icon small'><i class = 'icon-camera'></i>" .
+                    "</span></a></div><div class = 'item-details'>" .
+                    "<h3><a href = '" .WEB_PATH. $titleCate . "/" . $titleNews . "-" . $data["id_news"] . ".html' rel = 'bookmark' title = '" . $data["title_en"] . "'>" . $data["title_en"] . "</a></h3>" .
+                    "<div class = 'post_meta'>" .
+                    "<a href = 'hsevenmag/?p=83'><i class = 'icon-calendar mi'></i>" . date('d-m-Y',strtotime($data["creates"])) . "</a>" .
+                    "</div></div></div>";
+                }
+            }
+            echo"</div></div>";
+        }
+        if ($keyCate > 3) {
+            break;
+        }
+        $index++;
+    }
+}
+?>
+
+<!--end cate 4-->
+
+

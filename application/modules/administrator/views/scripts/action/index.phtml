@@ -1,0 +1,26 @@
+<form id="frmList" name="frmList" method="post">
+<input type="hidden" id="actionUrl" value="<?php echo WEB_PATH;?>/administrator/action" />
+<div class="search_box">
+	<div class="lb_search fl">Từ khóa</div>
+	<div class="lb_search_text fl"><input type="text" id="keyword" name="keyword" value="<?php echo $this->keyword;?>" /></div>
+	<div class="lb_search_button fl"><input id="search" type="button" value="Tìm kiếm" /></div>
+	<div class="lb_reset_button fl"><input id="reset" type="button" value="Reset" /></div>
+	<div id="loading" class="loading mt5 fl"></div>
+	<div class="cb"></div>
+</div>
+<div class="cb"></div>
+<article class="module width_full">
+<header>
+  <h3 class="tabs_involved">Quản lý danh sách các chức năng</h3>
+	<div class="functionBtnEvent">
+		<ul>
+		  <li><a href="<?php echo WEB_PATH;?>/administrator/action/update">Thêm chức năng mới</a></li>
+		</ul>
+	</div>
+</header>
+<div class="module_content">
+	<span id="actionArea"></span>
+</div>
+</article>
+<div class="clear"></div>
+</form>

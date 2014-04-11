@@ -1,0 +1,148 @@
+ul.backoff-prix li {list-style:square url("../img/list-style.png"); padding: 4px;} 
+ul.b {list-style-position:outside;}
+
+.text-bak-01 {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px 13px 0px 0px;
+line-height: 1.2;
+float: left;
+font-size: 16px;
+margin-left: 10px;
+
+}
+.text-bak-p-02 {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px 13px 0px 19px;
+line-height: 1.2;
+float: left;
+font-size: 16px;
+margin-left: 10px;
+
+}
+#bg-backoffice-ul-li {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 550px;
+}
+#page-01-bk-of-hei {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 461px;
+padding-top: 20px;
+}
+#bg-office-05 {
+background: url("../img/bg-backoffi5.png") repeat !important;
+min-height: 200px;
+padding-top: 1%;
+}
+.bg-ogg-fficw {
+min-height: 200px;
+}
+
+.text-bk-ofi-05 {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+font-size: 16px;
+}
+ul.bk-office-05-ul li {/* list-style:square url("../img/bl-list-office-05.png"); */ margin-bottom: 19px;
+margin-top: 10px;} 
+.col-md-12.h3-bkoffice-05 {
+line-height: 1.1;
+padding: 0px;
+margin: 0px 0px 0px 0px;
+color: #4e4e4e;
+font-size: 31px;
+height: 43px;
+}
+.img-bk-office-05-ul {background:url("../img/bl-list-office-05.png") no-repeat;}
+.img-li-bk-office-05 {
+	height: 28px;
+width: 28px;
+margin-right: 5px;}
+
+.img-li-bkofii-office-04 
+{
+	height: 14px;
+    width: 14px;
+    margin-right: 17px;
+    }
+.item.row.page-office-04 {
+min-height: 100px;
+}
+.text-just-bk {
+text-align: justify;
+color: #4e4e4e;
+line-height: 1.2;
+float: left;
+}
+.col-md-12.text-bkoff {
+line-height: 1.5;
+font-size: 17px;
+}
+.ul-bk-ofi-04 li {padding :5px;}
+.ul-bk-ofi-04.col-md-12 {
+padding: 0px;
+margin: 0px;
+}
+
+.height-bk-page-03 {
+/*margin-top: -108px; */
+}
+
+.col-md-12.text-left-backoffice {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 67px;
+}
+.page01-bkooffice {height: 410px;}
+.carousel-inner-bkoff > .item {
+min-height: 600px;
+}
+.iphone-edit-smp {
+    background-color: #C01C2B;
+    border-radius: 27px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-variant: small-caps;
+    height: 53px;
+    margin-left: 12%;
+    padding: 5px 10px 10px;
+    text-align: center !important;
+    width: 223px;
+}
+#bg-backoffice-07 {
+background-color: #fff;
+min-height: 550px;
+}
+
+#bg-backoffice-ul-li .bkoff-active {display:block;overflow:none;}
+#bg-backoffice-ul-li #content-server {
+	display:none;
+	overflow:hidden;
+	background: #fafafa;
+    padding: 15px 25px;
+    border-radius: 2px;
+}
+#cn-tabs .service {
+display: none;
+overflow: hidden;
+}
+#cn-tabs #active-ct {/* display:block; */}
+
+.ul-prix-ul-right-07-bk {
+margin-top: 50px;
+float: right;
+}
+
+.col-lg-9.col-md-9.col-sm-9.col-xs-12.ul-left-07 {
+float: left;
+}
+
+.view-0ffice-07 {min-height: 220px;}

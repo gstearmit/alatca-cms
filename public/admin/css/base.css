@@ -1,0 +1,282 @@
+@charset "utf-8";
+section#main {
+margin-top: 39px;
+}
+.menu-view-li  { z-index:8000;}
+.demo {
+width: 100%;
+margin: 0px auto 0;
+}
+.demo > ul > li {
+	float: left;
+	width: 60px;
+	text-align: center;
+	position: relative;
+}
+.demo > ul > li a {
+	display: block;
+	color: #fff;
+}
+.demo > ul > li a:after {
+	display: inline-block;
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	font-size: 30px;
+	color: #a1a1a1;
+}
+.demo > ul > li:nth-child(1) > a:after {
+	content: "\2c";
+
+}
+.demo > ul > li:nth-child(2) > a:after {
+	content: "\21";
+
+}
+.demo > ul > li:nth-child(3) > a:after {
+	content: "\2f";
+
+}
+.demo > ul > li div {
+	position: relative;
+	margin-left: -40px;
+	width: 180px;
+	height: 0px;
+	overflow: hidden;
+	-webkit-transition: height 0.4s linear;
+	   -moz-transition: height 0.4s linear;
+			transition: height 0.4s linear;
+}
+.demo > ul > li:hover div {
+	height: 180px;
+	z-index: 2;
+}
+.demo > ul > li ul {
+	position: absolute;
+	margin-top: 10px;
+	font-size: 16px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	text-align: left;
+	width: 140px;
+	line-height: 30px;
+	padding: 10px 0;
+	border-radius: 3px;
+}
+.demo > ul > li:nth-child(1) ul {
+	box-shadow: 0 1px 0 #121311 inset,0 0 1px #3F443E inset;
+    background: -webkit-linear-gradient(top,#444743 10%,#4A5748);
+    background: -moz-linear-gradient(top,#31db17 10%,#0b9200);
+    background: linear-gradient(top,#31db17 10%,#0b9200);
+}
+.demo > ul > li:nth-child(2) ul {
+    box-shadow: 0 1px 0 #121311 inset,0 0 1px #3F443E inset;
+    background: -webkit-linear-gradient(top,#444743 10%,#4A5748);
+    background: -moz-linear-gradient(top,#31db17 10%,#0b9200);
+    background: linear-gradient(top,#31db17 10%,#0b9200);
+}
+.demo > ul > li:nth-child(3) ul {
+    box-shadow: 0 1px 0 #252528 inset,0 0 1px #252528 inset;
+    background: -webkit-linear-gradient(top,#252528 10%,#252528);
+    background: -moz-linear-gradient(top,#00c3db 10%,#005e91);
+    background: linear-gradient(top,#00c3db 10%,#005e91);
+}
+.demo > ul > li ul li a {
+	position: relative;
+	padding: 0 20px;
+}
+.demo > ul > li:nth-child(1) ul li a:hover {
+	text-decoration: none;
+	background-color:#444743;
+}
+.demo > ul > li:nth-child(2) ul li a:hover {
+	text-decoration: none;
+	background-color:#444743;
+}
+.demo > ul > li:nth-child(3) ul li a:hover {
+	text-decoration: none;
+	background-color: #0a5278;
+}
+.demo > ul > li:nth-child(1) ul li a {
+	border-bottom: 1px solid #928787;
+}
+.demo > ul > li:nth-child(2) ul li a {
+	border-bottom: 1px solid #707A70;
+}
+.demo > ul > li:nth-child(3) ul li a {
+	border-bottom: 1px solid #D9D9EC;
+}
+.demo > ul > li ul li:first-child a:first-child:before {
+	position: absolute;
+	content: '';
+	width: 1px;
+	height: 1px;
+	border: 5px solid transparent;
+	left: 50%;
+	top: -20px;
+	margin-left: -5px;
+	z-index: 99;
+}
+.demo > ul > li:nth-child(1) ul li a:first-child:before {
+	border-bottom-color: #181B1B;
+}
+.demo > ul > li:nth-child(2) ul li a:first-child:before {
+	border-bottom-color: #181B1B;
+}
+.demo > ul > li:nth-child(3) ul li a:first-child:before {
+	border-bottom-color: #181B1B;
+}
+ 
+/* -------------------------------------------------
+ * css3 & html5
+ * -------------------------------------------------
+*/
+/* html5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{
+    display: block;
+}
+audio,canvas,video{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+audio:not([controls]){
+    display: none;
+    height: 0;
+}
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+input[type="search"]{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration{
+    -webkit-appearance: none;
+}
+:-moz-placeholder,
+::-webkit-input-placeholder{
+  color: #999;
+}
+
+abbr[title]{
+    border-bottom: 1px dotted;
+}
+b,strong{
+    font-weight: bold;
+}
+blockquote{
+    margin: 1em 40px;
+}
+dfn{
+    font-style: italic;
+}
+mark{
+    background: #ff0;
+    color: #444;
+}
+code,kbd,pre,samp{
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+pre{
+    margin: 1em 0;
+	white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q{
+    quotes: none;
+}
+q:before,
+q:after{
+    content: '';
+    content: none;
+}
+small{
+    font-size: 80%;
+}
+sub,sup{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup{
+    top: -0.5em;
+}
+sub{
+    bottom: -0.25em;
+}
+
+/****end css3 htmml5 *******/
+.page-menu{
+    text-align:left;
+}
+.wrap_top_nav{
+    background-color:#333;
+	box-shadow:0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	height:40px;
+}
+#top_nav{
+    width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+#top_nav a{
+    font-size:16px;
+	line-height:40px;
+	float:left;
+	margin-right:20px;
+	color:#999;
+	text-decoration:none;
+}
+#top_nav a:hover{
+    color:#fff;
+}
+#top_nav li:nth-child(1) a{
+    background-image:url(http://www.w3cplus.com/sites/all/themes/marvin/logo.png);
+	background-position: 0 -12px;
+    background-repeat: no-repeat;
+    background-size: 68px 60px;
+	padding-left:74px;
+	color:#fff;
+	width:74px;
+	overflow:hidden;
+}
+#read{
+    position:absolute;
+	right:0;
+	top:0;
+	font-family:'����';
+}
+#header{
+    text-align:center;
+}
+#header .white{
+    color:#fff;
+}
+#header .blank{
+    color:#444;
+}
+#header h1{
+    font-size:24px;
+}
+#header h2{
+	font-weight:normal;
+}
+#ad_w3cplus {
+	width: 750px;
+	margin: 100px auto;
+	text-align: center;
+}
+#ad_w3cplus .grid-ad {
+ float:left;
+}

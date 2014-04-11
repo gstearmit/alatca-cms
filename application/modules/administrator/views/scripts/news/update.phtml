@@ -1,0 +1,158 @@
+<?php 
+	$objUtil = new HT_Model_administrator_models_utility();
+	$news = $this->news;
+	$ustatus = $this->ustatus;
+	$message  = null;
+	if($ustatus == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($ustatus == "-1"){
+		$message = '<div class="ub_message"><span>Tiêu đề này đã tồn tại, vui lòng chọn một tiêu đề khác</span></div>';
+	}
+	$status = (int)@$news['status'];
+	$image = @$news['image'];
+?>
+
+<style>
+	.ub_right1 input {height: auto;}
+</style>
+<div class="row" style="height: 16px;"></div>
+
+<div class="row">
+                <div class="col-sm-12">
+                  <div class="box">
+                    <div class="box-header blue-background">
+                      <div class="title">Thêm mới / Cập nhật tag của tin tức</div>
+                      <div class="actions">
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class="icon-remove"></i> </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i> </a>
+                      </div>
+                    </div>
+                    
+                    <div class="box-content">
+                     <?php echo $message;?>
+                     
+                      <form  class="form form-horizontal validate-form" style="margin-bottom: 0;" novalidate="novalidate" id="frmUpdate" name="frmUpdate" method="post" action="<?php echo WEB_PATH;?>/administrator/news/update" enctype="multipart/form-data">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+						
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Kích hoạt'>Kích hoạt</label>
+                          <div class='col-sm-4 controls'>
+                          
+				               <?php if($status == 'active'){?>
+								<input type="radio" name="status" value="active" checked="checked" /> Có <input type="radio" name="status" value="pending" /> Không
+							    <?php }else{?>
+								<input type="radio" name="status" value="active" /> Có <input type="radio" name="status" value="pending" checked="checked" /> Không 
+							    <?php }?>
+                          </div>
+                        </div>
+                        
+						<div class="form-group">
+                          <label class="control-label col-sm-3" for="validation_select">Chuyên mục</label>
+                          <div class="col-sm-4 controls">
+                          	<?php 
+								$groupList = $this->groupList;
+								$categories = $news['categories'];
+								foreach((array)$groupList as $group){
+									echo '<div class="new_group"><b>'.$group['group_name'].'</b></div>';
+									$categoryList = $group['categoryList'];
+									foreach((array)$categoryList as $cate){
+										$checked = null;
+										$cateId = $cate['category_id'];
+										if(@in_array($cateId,$categories)) $checked = 'checked="checked"';
+										echo '<div class="new_cate fl" id="checkboxes">';
+											echo '<input type="checkbox" '.$checked.' name="category_ids[]" value="'.$cateId.'">';
+											echo $cate['category_name'];
+										echo '</div>';
+									}
+									echo '<div class="cb"></div>';
+								}
+							?>
+                          </div>
+                        </div>
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Title</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control'   id='title_vn' name='title_vn' placeholder='Title' type='text' value="<?php echo stripcslashes(@$news['title_vn']);?>">
+                          </div>
+                        </div>
+                        
+                        <?php if($image){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$news['image_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $image;?>" />
+			              <input type="checkbox" name="delete_image"> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                        
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Ảnh minh họa</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control' id='image' name='image' type="file" />
+                          </div>
+                        </div>
+                        
+                         <div class='form-group'>
+                          <label class='control-label col-sm-8' for=''>Định dạng: *.<?php echo IMAGE_TYPE_ALLOW;?>, dung lượng nhỏ hơn 1MB</label>
+                          <div class='col-sm-4 controls'>
+                          </div>
+                        </div>
+                        
+                         <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Chú thích cho ảnh</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control'  type="text" id="image_description" name="image_description"  value="<?php echo @$news['image_description'];?>"  />
+                          </div>
+                        </div>
+                        
+                         <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Mô tả ngắn</label>
+                          <div class='col-sm-4 controls'>
+                            <textarea type="text" id="desc_vn" name="desc_vn" style="margin: 0px; width: 302px; height: 79px;"><?php echo stripcslashes(@$news['desc_vn']);?></textarea>
+                           </div>
+                        </div>
+                        
+                       <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Nội dung bài viết</label>
+                       </div>
+                       <div class='form-group' style = " margin: 0px 20px 0px 20px ; " >
+                           <textarea type="text" id="content_vn" name="content_vn"><?php echo stripcslashes(@$news['content_vn']);?></textarea>
+                           <?php $objUtil->renderCkeditor('content_vn',400)?>
+                       </div>
+                  
+                   
+                        
+                       <div class='form-actions' style='margin-bottom:0'>
+                          <div class='row'>
+                           <div class="col-sm-4"></div>
+                            <div class='col-sm-2'>
+                              <button class='btn btn-primary ub_button fl' type='submit' onclick="return validateData()" >
+                                <i class='icon-save'></i>
+                                Lưu lại
+                              </button>
+                             
+                            </div>
+                            <div class="col-sm-2">
+                              <button style="margin-left: -45px;" id="cancel" class='btn ub_button fl' type='submit'>
+                                <i class='icon-remove'></i>
+                               <a href="<?php echo WEB_PATH.'/administrator/news';?>">Hủy</a>
+                              </button>
+                            </div>
+                            <div class="col-sm-4"></div>
+                          </div>
+                        </div>
+                        
+                       
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+ </div>
+
+
+

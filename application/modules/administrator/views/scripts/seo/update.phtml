@@ -1,0 +1,115 @@
+<?php 
+	$user = $this->user;
+
+	$status	  = $this->status;
+	$role = $this->role;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Add new / Update</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        S.E.O
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal validate-form" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/seo/update" accept-charset="UTF-8">
+						<span class="page_title"> </span>
+						<input type="hidden" id="id" name="id" value="<?php echo $this->header_id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+						
+                        <input name="authenticity_token" type="hidden" />
+                        <input type="hidden" id="userUrl" name="userUrl" value="<?php echo WEB_PATH;?>/administrator/seo/">
+                        
+                     <div class='form-group'>
+                        <label class='col-md-3 control-label' for='header_key'>Page name</label>
+                        <div class='col-sm-4 controls'>
+                        	<input type="text" class='form-control' id="page_name" name="page_name" value="<?php echo @$user['page_name'];?>" />
+                        </div>
+                      </div>
+                      
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='header_key'>Page URL</label>
+                        <div class='col-sm-4 controls'>
+                        	<input type="text" class='form-control' id="page_url" name="page_url" value="<?php echo @$user['page_url'];?>" />
+                        </div>
+                      </div>
+                      
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='header_key'>Page keyword</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='6'  type="text" class='form-control' id="header_key" name="header_key" value="<?php echo @$user['header_key'];?>" />
+                        </div>
+                      </div>
+                      
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='tag_title'>Tag title</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='6'  type="text" class='form-control' id="tag_title" name="tag_title" value="<?php echo @$user['tag_title'];?>" />
+                        </div>
+                      </div>
+                      
+                      <div class='form-group';>
+                        <label class='col-md-3 control-label' for='tag_description"'>Tag Description</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='6' type="text" class='form-control'  id="tag_description" name="tag_description" value="<?php echo @$user['tag_description'];?>" />
+                        </div>
+                      </div>
+                     
+                      <div class='form-group';>
+                        <label class='col-md-3 control-label' for='header_order'>Order</label>
+                       <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true'  type="text" class='form-control' id="header_order" name="header_order" value="<?php echo @$user['header_order'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='header_status'>Status</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true'   class='form-control' type="text" id="header_status" name="header_status" value="<?php echo @$user['header_status'];?>" />
+                        </div>
+                      </div>
+                      
+                      
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' type="submit" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/seo';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

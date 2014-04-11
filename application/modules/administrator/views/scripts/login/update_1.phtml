@@ -1,0 +1,57 @@
+<?php 
+	$user = $this->user;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+?>
+<form id="frmUpdate" name="frmUpdate" method="post" action="<?php echo WEB_PATH;?>/administrator/user/update">
+<input type="hidden" id="id" name="id" value="<?php echo $this->user_id;?>">
+<input type="hidden" id="do" name="do" value="submit" />
+<article class="module width_full">
+<header>
+  <h3 class="tabs_involved">Thêm mới một địa điểm</h3>
+	<div class="functionBtnEvent">
+		<ul>
+		  <li><a href="<?php echo WEB_PATH;?>/administrator/user">Quay lại trang quản lý</a></li>
+		</ul>
+	</div>
+</header>
+<div class="module_content">
+	<div class="update_box">
+		<div class="ub_left fl">Địa điểm</div>
+		<div class="ub_right fl"><input type="text" id="user_name" name="user_name" value="<?php echo @$user['user_name'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Địa chỉ</div>
+		<div class="ub_right fl"><input type="text" id="address" name="address" value="<?php echo @$user['address'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Điện thoại</div>
+		<div class="ub_right fl"><input type="text" id="phone" name="phone" value="<?php echo @$user['phone'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Đường dây nóng</div>
+		<div class="ub_right fl"><input type="text" id="hotline" name="hotline" value="<?php echo @$user['hotline'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Email</div>
+		<div class="ub_right fl"><input type="text" id="email" name="email" value="<?php echo @$user['email'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Website</div>
+		<div class="ub_right fl"><input type="text" id="website" name="website" value="<?php echo @$user['website'];?>" /></div>
+		<div class="cb"></div>
+		<div class="ub_button_list">
+			<div id="cancel" class="ub_button fl">
+				<a href="<?php echo WEB_PATH.'/administrator/user';?>">Quay lại</a>
+			</div>
+			<div onclick="return validateData()" class="ub_button fl">
+				Lưu lại
+			</div>
+			<div class="cb"></div>
+		</div>
+	</div>
+	<?php echo $message;?>
+</div>
+</article>
+<div class="clear"></div>
+</form>

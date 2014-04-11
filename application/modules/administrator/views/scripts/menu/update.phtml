@@ -1,0 +1,109 @@
+<?php 
+	$menu = $this->menu;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Menu URL bị trùng hoặc không tìm được module tương ứng.</span></div>';
+	}elseif($status == "-2"){
+		$message = '<div class="ub_message"><span>Không tìm được module tương ứng. Vui lòng chạy Reload ACL trước khi cập nhật module.</span></div>';
+	}
+	if(isset($menu['menu_order'])){
+		$menu_order = $menu['menu_order'];
+	}else{
+		$menu_order = 10;
+	}
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Thêm mới / cập nhật left menu</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        Left menu
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/menu/update" accept-charset="UTF-8">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='menu_url'></label>
+                        <div class='col-md-9'>
+                        	<?php echo $message;?>
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='menu_url'>Nhóm menu</label>
+                        <div class='col-md-5'>
+                        	<?php echo $this->menugroup?>
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='menu_url'>Menu URL</label>
+                        <div class='col-md-9'>
+                        	<input type="text" class='form-control' id="menu_url" name="menu_url" placeholder='Menu URL' value="<?php echo @$menu['menu_url'];?>" />
+                        </div>
+                        <div class='col-md-3 control-label' for='menu_url'></div>
+                        <div class='col-md-9'>
+                        	<span>Ví dụ: </span>http://localhost/wish/administrator/news hoặc http://domain.com/administrator/news
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='menu_name' placeholder='Page URL'>Tên menu</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="text" id="menu_name" name="menu_name" value="<?php echo @$menu['menu_name'];?>" />
+                        </div>
+                        <div class='col-md-3 control-label' for='menu_url'></div>
+                        <div class='col-md-9'>
+                        	<span>Ví dụ: </span>Danh sách tin tức
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='menu_order' >Vị trí menu</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="text" id="menu_order" name="menu_order" value="<?php echo @$menu['menu_order'];?>" />
+                        </div>
+                        <div class='col-md-3 control-label'></div>
+                        <div class='col-md-9'>
+                        	Số càng lớn thì vị trí càng cao trong nhóm menu. Nên đặt trong khoảng từ 10 đến 100.
+                        </div>
+                      </div>
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' onclick="return validateData()" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/menu';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>
