@@ -1,0 +1,122 @@
+<?php 
+	$user = $this->user;
+	
+	$status	  = $this->status;
+	$message	  =$this->message;
+	
+	
+	
+	
+	@$auth 		= Zend_Auth::getInstance();
+	$users 		= @$auth->getStorage()->read();
+	//echo $status;
+	//var_dump($users);
+	if($status == 1){
+		$stt="Change password";
+		$message = '<div class="alert alert-success alert-dismissable">
+                <a class="close" data-dismiss="aler" href="#">&times;</a>
+					<i class="icon-ok-sign"></i>
+                <strong>'.$stt.'</strong>
+                Success !
+
+              </div>';
+	}
+	if($status == 2){
+		$stt="Change password";
+		$message = '<div class="alert alert-danger alert-dismissable">
+                <a class="close" data-dismiss="aler" href="#">&times;</a>
+					<i class="icon-remove-sign"></i>
+                <strong>'.$stt.'</strong>
+                		falsez
+              </div>';
+	}
+	?>
+
+
+
+<div class='row navbar' id='content-wrapper'>
+     	<div class="box_message"><?php echo $message; ?></div>
+            <div class='col-xs-12'>
+              <div class='row'>
+              
+         
+              
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Change password</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        User
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                    
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal validate-form"  style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/user/changepass" accept-charset="UTF-8">
+						<span class="page_title"> </span>
+						<input type="hidden" id="id" name="id" value="<?php echo $users->userid;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                        <input type="hidden" id="userUrl" name="userUrl" value="<?php echo WEB_PATH;?>/administrator/user/changepass">
+                        
+                         
+                   
+                     
+                     
+                     <div class='form-group'>
+                          <label class='control-label col-sm-3' for='validation_password'>Password</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control' data-rule-minlength='6' data-rule-password='true' data-rule-required='true' id='password' name='password' placeholder='Password' type='password'>
+                          </div>
+                        </div>
+                     
+                     
+                     
+                     	<div class='form-group'>
+                          <label class='control-label col-sm-3' for='newpassword'>New password</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control' data-rule-minlength='6' data-rule-password='true' data-rule-required='true' id='newpassword' name='newpassword' placeholder='Password' type='password'>
+                          </div>
+                        </div>
+                        
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='renewpassword'>Password confirmation</label>
+                          <div class='col-sm-4 controls'>
+                            <input class='form-control' data-rule-equalto='#newpassword' data-rule-required='true' id='renewpassword' name='renewpassword' placeholder='Password confirmation' type='password'>
+                          </div>
+                        </div>
+                    
+                      
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                          	<button type="submit" class="btn btn-primary">
+                                <i class="icon-save"></i>
+                                Save
+                              </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/user';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

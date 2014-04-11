@@ -1,0 +1,37 @@
+#title_hardware-01 {
+color: #4E4E4E;
+font-size: 32px;
+font-weight: bold;
+margin: 45px 0px 0px 9px;
+}
+
+.text-just-harw {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+font-size: 17px;
+}
+.p-view-ttkh-har {
+font-size: 17px;
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+}
+.text-just-harw-marg {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+margin-right: 42px;
+}
+.h3-span-hard-099.col-lg-12.col-md-12.col-sm-12.col-xs-12 {
+margin-bottom: 0px;
+font-size: 27px;
+color: #4fbdd9;
+text-align: center;
+}

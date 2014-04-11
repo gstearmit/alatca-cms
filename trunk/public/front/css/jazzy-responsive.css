@@ -1,0 +1,304 @@
+/* Jazzy Bananna Responsive */
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+.brand-fluid {
+  margin-top: -60px;
+}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 980px) and (max-width: 1199px) { 
+.brand-fluid {
+  margin-top: -60px;
+}
+
+#pricing-table .first.span4 {
+  margin-left: 17px;
+}
+
+#pricing-table .third.span4 {
+  margin-right: 17px;
+}
+
+img.flashing, img.static {
+  height: 119px;
+  width: 140px;
+}
+
+.carousel-caption h1 {
+  font-weight: normal
+}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+#magic-line {
+  display: none;
+}
+
+.nav-fluid {
+  width: 100%;
+}
+
+#navigation {
+  background: #040404;
+  margin-top: 10px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.collapse {
+  position: absolute;
+  z-index: 200;
+  width: 86%;
+  margin-top: 30px;
+  left: 7%;
+}
+
+.navbar-inverse .nav-collapse .nav > li > a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+
+.carousel-caption h1 {
+  font-size: 3em;
+}
+
+#pricing-table .first.span4 {
+  margin-left: 17px;
+}
+
+#pricing-table .third.span4 {
+  margin-right: 17px;
+}
+
+#pricing-table h3 {
+  font-size: 30px;
+}
+
+.top-line {
+  display: none;
+}
+
+img.flashing, img.static {
+  height: 89px;
+  width: 104px;
+}
+
+.carousel-caption h1 {
+  font-weight: normal
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.header-wrapper, .actions-wrapper, .footer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-content-wrapper, .portfolio-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#magic-line, .span5.slide-image {
+  display: none;
+}
+
+.branding {
+  width: 190px;
+  margin: auto;
+}
+
+#navigation {
+  background: #040404;
+  margin-top: 10px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.collapse {
+  position: absolute;
+  z-index: 200;
+  width: 86%;
+  margin-top: 30px;
+  left: 7%;
+}
+
+.navbar-inverse .nav-collapse .nav > li > a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+
+.action-block {
+  margin-bottom: 34px;
+}
+
+.carousel .item {
+  height: 350px;
+}
+
+.carousel-caption {
+  margin-top: 40px;
+}
+
+.carousel-caption h1 {
+  font-size: 3em;
+}
+
+.content-layer {
+  height: 4500px;
+}
+
+
+#pricing-table .first.span4 {
+  margin-left: 5%;
+  width: 30%;
+}
+
+#pricing-table .second.span4 {
+  width: 30%;
+}
+
+#pricing-table .third.span4 {
+  margin-right: 5%;
+  width: 30%;
+}
+
+.canvas-wrapper {
+  width: 500px !important;
+}
+
+#canvas {
+  width: 500px !important;
+}
+
+.carousel-caption h1 {
+  font-weight: normal
+}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+body {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#magic-line, .span5.slide-image {
+  display: none;
+}
+
+#navigation {
+  background: #040404;
+  margin-top: 10px;
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.collapse {
+  position: absolute;
+  z-index: 200;
+  width: 86%;
+  margin-top: 30px;
+  left: 7%;
+}
+
+.carousel-caption {
+  margin-top: 40px;
+}
+
+.carousel .item {
+  height: 350px;
+}
+
+.navbar-inverse .nav-collapse .nav > li > a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+
+
+
+.canvas-wrapper {
+  width: 300px !important;
+  height: 200px !important;
+}
+
+#canvas {
+  width: 300px !important;
+  height: 200px !important;
+}
+
+.main-content-wrapper, .portfolio-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#pricing-table .first.span4, #pricing-table .second.span4, #pricing-table .third.span4 {
+  margin: 30px 0px;
+  width: 100%;
+}
+
+#pricing-table .second.span4 {
+  margin-top: 60px;
+}
+
+#signmeup .span8 {
+  padding: 0 20px;;
+}
+
+#signmeup .span4 {
+  padding: 0;
+}
+
+#signmeup .btn {
+  width: 80%;
+  margin: 0 10%;
+  margin-bottom: 20px;
+}
+
+.slide-page h2 {
+  font-size: 1.3em;
+}
+
+.slide-page p.lead {
+  font-size: 0.9em;
+  line-height: 1.1em;
+}
+
+.slide-page .thumbnail, .slide-page em {
+  display: none;
+}
+
+}

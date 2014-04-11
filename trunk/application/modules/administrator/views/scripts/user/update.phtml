@@ -1,0 +1,116 @@
+<?php 
+	$user = $this->user;
+	
+	$status	  = $this->status;
+	$role = $this->role;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Thêm mới, cập nhật quản trị viên</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        Quản trị hệ thống
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal validate-form" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/user/update" accept-charset="UTF-8">
+						<span class="page_title"> </span>
+						<input type="hidden" id="id" name="id" value="<?php echo $this->userid;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                        <input type="hidden" id="userUrl" name="userUrl" value="<?php echo WEB_PATH;?>/administrator/user/">
+                        
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='firstname'>First Name :</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='1'  type="text" class='form-control' id="firstname" name="firstname" value="<?php echo @$user['firstname'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='firstname'>Last Name :</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='1'  type="text" class='form-control' id="lastname" name="lastname" value="<?php echo @$user['lastname'];?>" />
+                        </div>
+                      </div>
+                      
+                       <?php 
+                      //echo $this->userid;
+                      $stt= "block";
+                      $username = "user_name";
+                      	if($this->userid > 0){
+								$stt="none";
+								$username="abcd";
+							}
+                      ?>
+                      
+                      <div class='form-group' style="display: <?php echo $stt; ?>";>
+                        <label class='col-md-3 control-label' for='<?php echo $username?>"'>Username</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='2' type="text" class='form-control'  id="<?php echo $username?>" name="<?php echo $username?>"" value="<?php echo @$user['user_name'];?>" />
+                        </div>
+                      </div>
+                     
+                      <div class='form-group' style="display: <?php echo $stt; ?>";>
+                        <label class='col-md-3 control-label' for='user_name'>Password</label>
+                       <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='2'  type="password" class='form-control' id="pass" name="pass" value="<?php echo @$user['pass'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='email'>Email</label>
+                        <div class='col-sm-4 controls'>
+                        	<input data-rule-required='true' data-rule-minlength='2'   class='form-control' type="text" id="email" name="email" value="<?php echo @$user['email'];?>" />
+                        </div>
+                      </div>
+                      
+                        <div class='form-group'>
+                        <label class='col-md-3 control-label' for='description'>Role </label>
+                        <div class='col-sm-4 controls'>
+                        	
+                        	<div class="ub_right fl"><?php echo $this->role;?></div>
+                        </div>
+                      </div>
+                      
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' type="submit" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/user';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

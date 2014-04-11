@@ -1,0 +1,129 @@
+#feature_slider .slide#responsive .info h2 {
+color: #fff;
+font-size: 50px;
+position: relative;
+right: 227%;
+font-weight: normal;
+text-shadow: 1px 1px 1px #3b3262;
+line-height: 56px;
+margin-left: -172px;
+z-index: 5;
+margin-top: -123px;
+width: 985px;
+text-align: center!important;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	#feature_slider .slide#responsive .info h2 {
+	color: #fff;
+	font-size: 50px;
+	position: relative;
+	right: 227%;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #3b3262;
+	line-height: 56px;
+	margin-left: -90px;
+	z-index: 5;
+	margin-top: -123px;
+	width: 980px;
+	text-align: center!important;
+	}
+	
+	
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	#feature_slider .slide#responsive .info h2 {
+		color: #fff;
+		font-size: 50px;
+		position: relative;
+		right: 227%;
+		font-weight: normal;
+		text-shadow: 1px 1px 1px #3b3262;
+		line-height: 56px;
+		margin-left: -172px;
+		z-index: 5;
+		margin-top: -123px;
+		width: 965px;
+		text-align: center!important;
+		}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	#feature_slider .slide#responsive .info h2 {
+color: #fff;
+font-size: 50px;
+position: relative;
+right: 227%;
+font-weight: normal;
+text-shadow: 1px 1px 1px #3b3262;
+line-height: 56px;
+margin-left: -172px;
+z-index: 5;
+margin-top: -123px;
+width: 965px;
+text-align: center!important;
+}
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	#feature_slider .slide#responsive .info h2 {
+color: #fff;
+font-size: 50px;
+position: relative;
+right: 227%;
+font-weight: normal;
+text-shadow: 1px 1px 1px #3b3262;
+line-height: 56px;
+margin-left: -172px;
+z-index: 5;
+margin-top: -123px;
+width: 965px;
+text-align: center!important;
+}
+#features.container {
+min-height: 1366px;
+display: block;
+}
+
+}
+
+
+ 
+
+/****fix all device product height*****/
+.caption-ez2-product {
+background-color: #FFFFFF;
+border-radius: 4px;
+min-height: 369px;
+margin-bottom: 12px;
+}
+
+/*******************fix slider ************************/
+.text-view {
+  color: #fff;
+  font-weight: bold;
+  text-align: center!important;
+  font-size: 21px;
+  z-index: 13;
+  margin-top: 500px; 
+  
+}
+.text-view-edit-pos {
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center!important;
+    margin-top: 450px;
+    z-index: 21;
+}
+#responsive.text-view-edit-pos {
+   
+}
+/******************fix .slide-02 img ***************************/
+.slide-02 img { margin-left: 7%;}

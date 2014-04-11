@@ -1,0 +1,149 @@
+#minscrire-01 {background: url("../img/bg-giaiphap.png") repeat !important;min-height:600px;margin-top: 63px;padding-top:20px; }
+.minscrire-h3 {
+color: #4E4E4E;
+font-size: 32px;
+font-weight: bold;
+margin: 11px 0px 33px 0px;
+}
+.caret-01{ background: url("../img/caret-01.png") no-repeat !important; width:25px; height:25px; }
+.margin-meche img {
+width: 35px;
+height: 48px;
+background-color: #fff;
+position: relative;
+left: 114px;
+float: left;
+z-index: 2014;
+}
+.img-caret-02 {
+padding: 12px 11px 8px 5px;
+
+}
+.hidden_combobox {display: none;}
+.placeholder_style {font-weight: bold; color: #4E4E4E;}
+.auto_padding {padding-top: 12px;}
+.auto_padding1 {padding-top: 22px;}
+.text-minsrcre {height:44px; border-radius: 2px; width: 150px; }
+.input-small.text-minsrcre.col-lg-5.col-md-5.col-sm-12.col-xs-12 {
+margin: 6px;
+width: 168px;
+border: 1px solid #69c8ff;
+color: #4e4e4e;
+font-weight: bold;
+
+}
+.img-div-caret {
+width: 35px;
+background-color: #fff;
+height: 43px;
+position: absolute;
+z-index: 2014;
+left: 78px;
+top: 21px;
+}
+
+
+.select_box.col-lg-2.col-md-2.col-sm-12.col-xs-12 {
+width: 112px;
+padding-right: 0px;
+margin-top: 7px;
+height: 45px;
+border: 1px solid #69c8ff;
+}
+
+
+.input-small.text-minsrcre-th {
+height: 44px;
+margin: 13px 5px 13px 0px;
+width: 441px;
+border: 1px solid #69c8ff;
+border-radius:2px;
+color: #4e4e4e;
+font-weight: bold;
+z-index: 1;
+}
+
+.input-small.minsrcre-lb {
+height: 45px;
+margin: 13px 5px 13px 0px;
+color:#4e4e4e;
+width: 97%;
+
+}
+
+.input-small.text-minsrcre-selecbox {
+height: 45px;
+margin: 13px 5px 13px 0px;
+color:#4e4e4e;
+padding-right: 0px;
+width: 97%;
+border: 1px solid #69c8ff;
+border-radius: 0px;
+
+}
+
+.input-small.text-minsrcre-selecbox-01 {
+height: 45px;
+margin: 26px 5px 16px 0px;
+color:#4e4e4e;
+padding-right: 0px;
+width: 97%;
+border: 1px solid #69c8ff;
+background-color: #c3eefe;
+border-radius: 0px;
+
+}
+
+.cta-dangki {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 24px;
+font-size: 24px;
+text-align: center;
+}
+.but-minscri {
+background-color: rgb(187, 37, 37);
+border: none;
+color: #fff;
+height: 35px;
+}
+.margin-meche {
+margin: 13px 5px 13px 0px;
+height: 52px;
+}
+
+.caret {
+display: inline-block;
+width: 0;
+height: 0;
+vertical-align: top;
+border-top: 4px solid #000000;
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+content: "";
+}
+option {
+font-weight: normal;
+font-size:12px;
+
+}
+.form-control.select_box {
+border-radius: 0px;
+}
+
+.form-dropdown {
+cursor: pointer;
+background-image: url('../img/caret-01.png');
+background-repeat: no-repeat;
+background-position: center right;
+-webkit-appearance: none;
+}
+.padd-l-mart-min-edit {
+float: left;
+margin-left: 35px;
+margin-top: -5px;
+}

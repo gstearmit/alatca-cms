@@ -1,0 +1,138 @@
+.del-padding{padding:0px;}
+.del-padding-5px {padding:0px 0px 0px 5px;}
+.del-margin { margin:0px;}
+#page-01-tablette-of-hei {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 650px;
+}
+#page-02-acrh {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+min-height: 702px;
+}
+.img-arch img {width:475px;height:324px;}
+
+.padd-l-acr {float:left;}
+.page-02-acr-01 {float:left;}
+
+.col-md-12.text-acr-1 {
+line-height: 1.5;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 33px;
+color: #4E4E4E;
+font-size: 32px;
+font-weight: bold;
+margin: 0px 0px 0px 0px;
+}
+.padd-acr-02 {
+/* padding-top: 82px;*/
+}
+
+.img-acr-02 {
+background-color: #FFF;
+height: 298px;
+padding: 8px;
+width: 462px;
+}
+.img-acr-02 img {
+height: 278px;
+padding: 2px;
+width: 500px;}
+#acr-next {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 101px;
+}
+
+#acr-last {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 51px;
+}
+.iphone-p-acr {
+background-color: #4FBDD9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+margin: 0px;
+}
+.iphone-p-acr a {
+background-color: #4FBDD9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+margin: 0px;
+}
+
+.iphone-p-acr a:hover {
+background-color: #4FBDD9;
+border-radius: 27px;
+height: 53px;
+width: 451px;
+color: #FFF;
+font-variant: small-caps;
+padding: 7px 10px 10px 19px;
+font-size: 24px;
+text-align: center;
+margin: 0px;
+}
+.view-archi-07 {
+min-height: 187px;
+}
+.col-md-12.text-h03-arch {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+margin: 0px;
+min-height: 55px;
+
+}
+
+.cta-archive-001 {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+}
+.padd-l-archive-011 {
+float: left;
+margin-left: 43px;
+}
+h3.text-left-acrvhi {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px 0px 0px 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+width: 317px;
+}
+.icon-acr-edit.re-tkiem {
+position: relative;
+top: -9px;
+}
+.view-archi-07-01 {
+min-height: 189px;
+}
+.view-archi-07-02 {
+min-height: 154px;
+}

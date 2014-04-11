@@ -1,0 +1,56 @@
+.fl {float: left;}
+.cb {clear: both;}
+
+.dataTables_paginate ul li {cursor: pointer;}
+.add_icon {margin-top: 30px;}
+.page_title {font-family: Arial; font-size: 18px; font-weight: bold;}
+.loading {width: 32px; height: 32px; background: url("../images/ajax-loaders/4.gif") no-repeat; display: none;}
+.ub_message {}
+.ub_message span {font-weight: bold; color: #FF0000;}
+.font_normal {font-weight: normal; font-size: 12px;}
+
+.contrast-blue header .navbar {
+    background-color: #00ACEC;
+}
+
+.mt60 {margin-top: 60px;}
+.welcome {width: 700px; height: 352px; background: url("../images/welcome.jpg") no-repeat; border: solid 1px #e5e5e5; border-radius: 5px; margin: auto; }
+.denied {width: 700px; height: 370px; background: url("../images/denied.png") no-repeat; border: solid 1px #e5e5e5; border-radius: 5px; margin: auto; }
+.avatar_box {width: 70px; height: 70px; margin: auto; border: solid 1px #CCCCCC; border-radius: 5px; padding: 1px;}
+.avatar_box img {width: 70px; height: 70px; border-radius: 5px;}
+
+.module {
+border: 1px solid #9BA0AF;
+width: 100%;
+margin: 20px 3% 30px 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #ffffff;
+}
+
+.width_full {width: 95%;}
+.module header h3 {display: block; margin-left: 20px;}
+.module_content {min-height: 30px; height: auto !important; height: 30px; margin: 10px 20px;color: #222222;}
+.module_name {height: 22px; font-weight: bold; border-bottom: dotted 1px #CCCCCC; margin-bottom: 5px; margin-top: 10px;}
+.action_name {min-height: 20px; height: auto !important; height: 20px; width: 31%;}
+.action_name input {margin-right: 5px;} 
+.set_right {height: 20px;}
+.search {min-height: 40px; height: auto !important; height: 40px; padding-bottom: 10px;}
+.ub_blank1 {height: 20px;}
+.ub_button_list {width: 235px; height: 26px; margin: auto;}
+.ub_button {width: 94px; text-align:center; height: 33px; padding-top:6px; font-weight:bold; margin-left: 10px; cursor: pointer; margin-top: 10px; border: solid 1px #CCCCCC; border-radius: 5px; color: #1F1F20}
+.ub_button a { color: #1F1F20;font-weight:bold;}
+
+.bt_login {width: 90px;}
+.bt_add_news {width: 90px;}
+.bt_add_news a {color:#FFFFFF; font-weight:bold;}
+.action_buttons {width: 100px; height: 20px; margin: auto;}
+.action_buttons .icon_on {width: 55px; height: 20px; background: url("../images/icon_on.png") no-repeat;}
+.action_buttons .icon_off {width: 55px; height: 20px; background: url("../images/icon_off.png") no-repeat;}
+.action_buttons .icon_delete {width: 25px; height: 20px; background: url("../images/icon_delete.png") no-repeat;}
+.action_buttons .icon_key {width: 20px; height: 20px; background: url("../images/key.png") no-repeat;}
+.action_buttons .icon_edit {width: 25px;height: 23px;background: url("../images/docs.png") no-repeat;margin-top: -5px;}
+
+.pagination li .active {background-color: #00acec; color: #FFFFFF; font-weight: bold;}

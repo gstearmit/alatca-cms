@@ -1,0 +1,36 @@
+#cn-tabs .service {
+	display:none;
+	overflow:hidden;
+}
+
+.cn-content {
+    
+	overflow:hidden;
+	
+}
+
+.cn-content p {
+    z-index: 9999;
+}
+
+#cn-tabs .service:before {
+	/*
+    position: absolute;
+    display: block;
+    content: "";
+    top: 44%;
+    right: -3px;
+    width: 35px;
+    height: 35px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-left: none;
+    border-bottom: 0;
+    z-index: 1;
+    */
+}

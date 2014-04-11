@@ -1,0 +1,28 @@
+<form id="frmList" name="frmList" method="post">
+<input type="hidden" id="notegroupUrl" value="<?php echo WEB_PATH;?>/administrator/notegroup" />
+<div class="row">
+		<div class='col-xs-12'>
+              <div class='page-header page-header-with-buttons'>
+              	<div class="col-md-10">
+                <h1 class='pull-left'>
+                  <i class='icon-user'></i>
+                  <span class="page_title">Note group manager</span>
+                </h1>
+              	</div>
+              	<div class="col-md-2">
+              		<div class="add_icon"><a href="<?php echo WEB_PATH;?>/administrator/notegroup/update"><input type="button" class="btn btn-primary" value="Thêm mới" /></a></div>
+              	</div>
+            </div>
+          </div>
+	</div>
+	<div class="row navbar">
+		<div class="col-md-2 control-label" for='keyword'>Từ khóa</div>
+		<div class="col-md-4"><input type="text" id="keyword" name="keyword" class="form-control" value="<?php echo $this->keyword;?>" /></div>
+		<div class="col-md-3">
+			<input id="search" type="button" class="btn btn-primary" value="Tìm kiếm" />
+			<input id="reset" type="button" class="btn btn-success"  value="Reset" />
+		</div>
+		<div id="loading" class="col-md-3 loading mt5"></div>
+	</div>
+	<span id="notegroupArea"></span>
+</form>

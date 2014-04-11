@@ -1,0 +1,52 @@
+<?php 
+	$user = $this->user;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+?>
+<form id="frmUpdate" name="frmUpdate" method="post" action="<?php echo WEB_PATH;?>/administrator/user/role">
+<input type="hidden" id="userid" name="userid" value="<?php echo $this->userid;?>" />
+<input type="hidden" id="do" name="do" value="submit" />
+<article class="module width_full">
+<header>
+  <h3 class="tabs_involved">Cấp quyền cho thành viên</h3>
+	<div class="functionBtnEvent">
+		<ul>
+		  <li><a href="<?php echo WEB_PATH;?>/administrator/user">Quay lại trang quản lý</a></li>
+		</ul>
+	</div>
+</header>
+<div class="module_content">
+	<div class="update_box">
+		<div class="ub_left fl">Họ và Tên</div>
+		<div class="ub_right fl"><?php echo $user->fullname;?></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Username</div>
+		<div class="ub_right fl"><?php echo $user->user_name;?></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Email</div>
+		<div class="ub_right fl"><?php echo $user->email;?></div>
+		<div class="cb"></div>
+		<div class="ub_left fl">Nhóm thành viên</div>
+		<div class="ub_right fl"><?php echo $this->role;?></div>
+		<div class="cb"></div>
+		<div class="ub_button_list">
+			<div id="cancel" class="ub_button fl">
+				<a href="<?php echo WEB_PATH.'/administrator/user';?>">Quay lại</a>
+			</div>
+			<div id="btnSetRole" class="ub_button fl">
+				Cấp quyền
+			</div>
+			<div class="cb"></div>
+		</div>
+	</div>
+	<?php echo $message;?>
+</div>
+</article>
+<div class="clear"></div>
+
+</form>

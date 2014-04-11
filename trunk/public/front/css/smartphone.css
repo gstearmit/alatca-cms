@@ -1,0 +1,328 @@
+
+/* 
+.bg-product { background: url("../img/bg-product.png") repeat-x;
+   height: 120px;}
+ */
+.site-header-smartphone  {
+background-image: url('../img/bg_header.png');
+background-image: url("../img/slider-bg.png");
+background-repeat: repeat, repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+height: 60px;
+}
+.text-just-smp {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+margin-left: 25px;
+}
+.bg-product {
+    line-height: 1.1;
+    min-height: 120px;
+}
+.text-view-product {
+color: #999999;
+font-weight: bold;
+text-align: center;
+font-size: 21px;
+}
+#giaiphap-ez1-prod{
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+.h3-span-pro {
+margin-bottom: 0px;
+font-size: 19px;
+}
+.hieght-pad {
+padding-bottom: 30px;
+}
+.iphone-view-smartphone-05 {
+background-color: #c01c2b;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+float:left;
+text-align: center !important;
+/*
+position: relative;
+bottom: -65px;
+*/
+
+}
+.iphone-view-smartphone {
+	float:left;
+background-color: #c01c2b;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 52px;
+font-size: 24px;
+text-align: center;
+}
+.pagination-smart03 {margin:0px ; padding:0px;}
+.iphone-view-smartphone-02 {
+background-color: #c01c2b;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+}
+.iphone-view-smartphone-02 a {
+background-color: #c01c2b;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 42px;
+font-size: 24px;
+text-align: center;
+}
+.iphone-view-smartphone-02 a {text-decoration: none;}
+.col-md-8 a:hover {
+text-decoration: none;
+}
+
+.col-md-12 a:hover {
+text-decoration: none;
+}
+.ez-box-p-pro {
+min-height: 351px;
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+.text-just {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float:left;
+}
+
+.tinhnang-prod {
+min-height: 500px;
+background: url("../img/bg-giaiphap.png") repeat !important;
+}
+.ez-box {
+border-radius: 5px;
+font-size: 22px;
+text-align: center;
+color: #4e4e4e;
+}
+.caption-prod {
+/* background-color: #ffffff; */
+border-radius: 4px;
+}
+
+#quanlycuahang-prod {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+}
+#quanlycuahang-prod-ez2 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 383px;
+}
+.ez-box-pro-pro {
+
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+.tn-prod-2 {
+min-height: 338px;
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+.baocao-product {
+background-color: #bb88b5;
+border-radius: 27px;
+height: 60px;
+width: 222px;
+color: #fff;
+font-variant: small-caps;
+padding: 10px 10px 10px 52px;
+font-size: 24px;
+}
+
+/************bao cao ***************/
+.report-bc { min-height:400px;}
+.reprot-page6 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 300px;
+}
+
+.bc-pro-page6 {
+min-height: 134px;
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+
+/********  page 7****************/
+#maket-prod {
+background: url("../img/bg-marketting.png") repeat !important;
+}
+#box-market {
+background: url("../img/bg-marketting.png") repeat !important;
+min-height: 383px;
+}
+.p-view-ttkh {
+line-height: 1.2em;
+font-size: 15px;
+color: #4e4e4e;
+}
+
+.box-pr-duct-p2 {
+background: url('../img/bg-banhangtrenmoithietbi.png') repeat;
+min-height: 500px;
+}
+.item.row.item-page5 {
+min-height: 355px;
+}
+.item.row.item-procd {
+min-height: 315px;
+}
+
+#giaiphap-product {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+
+}
+
+#giaiphap-pag1-prod {
+background: url("../img/bg-giaiphap.png") repeat !important;
+}
+
+.text-just-prod {
+text-align: justify;
+color: #f6f6f6;
+padding: 0px;
+}
+.hei-smp-03 {height:44px;}
+.col-md-12.h3-smartphone {
+line-height: 1.1;
+padding: 0px;
+margin: 0px 0px 0px -11px;
+color: #4e4e4e;
+font-size: 31px;
+height: 43px;
+}
+#bk-smp-phone03 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 367px;
+padding-top: 3%;
+}
+.text-smartphone-01 {
+	margin-top:31px;
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+font-size: 15px;
+}
+.col-md-12.text-smartp-cta-020 {
+line-height: 1.5;
+font-size: 17px;
+padding: 23px 0px 0px 0px;
+}
+.smp-height {height:78px;}
+.col-md-12.text-smartp {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+margin: 0px 0px 10px 0px;
+}
+.cta-smartphone { margin-left:20%;}
+.cta-smartphone-01 { margin-left:24%;}
+.report-bc-smphone {
+min-height: 358px;
+}
+.col-md-12.text-left-prod {
+line-height: 1.5;
+font-size: 23px;
+padding: 0px;
+color: #f6f6f6;
+margin-left: 13px;
+}
+#title_khachhang-product {
+color: #fff;
+font-size: 32px;
+font-weight: bold;
+margin: 0px 0px 0px 9px;
+}
+.p-view-ttkh-product {
+line-height: 1.2em;
+font-size: 15px;
+color:#fff;
+}
+.col-md-12.text-left-product {
+line-height: 1.5;
+font-size: 17px;
+padding: 5px;
+display: inline-block;
+float: left;
+text-align: left;
+}
+.col-md-12.text-left-product i {
+float: left;
+margin: -8px 8px 0px 0px;
+padding:0px;
+max-width: 47px;
+}
+.col-md-12.text-left-product p {
+/* text-align: right;*/
+float: left;
+line-height: 1.5;
+font-size: 17px;
+color: #4e4e4e;
+margin: 0px;
+padding: 10px 0px 0px 0px;
+font-weight: bold;
+}
+.text-just-edi-09 {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+font-size: 14px;
+}
+.iphone-edit-smp-edit-09 {
+background-color: #C01C2B;
+border-radius: 27px;
+color: #FFFFFF;
+font-size: 24px;
+font-variant: small-caps;
+height: 53px;
+margin-left: -22%;
+padding: 5px 10px 10px;
+text-align: center !important;
+width: 223px;
+}
+.text-just-neu-edit {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+float: left;
+margin-bottom: 40px;
+}

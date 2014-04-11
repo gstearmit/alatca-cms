@@ -1,0 +1,255 @@
+/* 
+.bg-product { background: url("../img/bg-product.png") repeat-x;
+   height: 120px;}
+ */
+ .ul-product-099 {padding:0px;}
+ .ul-product-099 li {display:inline;}
+ .ul-product-099 li img {float:left;}
+ .ul-product-099 li p {float:right;}
+ .text-left-product {
+color: #4e4e4e;
+}
+h4.text-just {
+color: #4e4e4e;
+text-align: justify;
+font-size: 15px;
+font-weight: normal;
+}
+.but-minscri-product a {
+color: #fff;
+}
+.but-minscri-product  {
+background-color: #C01C2B;
+border: none;
+color: #fff;
+text-align: center;
+/* padding: 2px 4px 4px 20px; */
+}
+.col-md-12.text-left99-product {
+line-height: 1.5;
+font-size: 19px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: justify;
+}
+.cta-dangki-ppro {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+}
+.padd-l-mart {
+float: left;
+}
+.h3-span-pro-099 {
+margin-bottom: 0px;
+font-size: 26px;
+color: #4fbdd9;
+}
+ .col-md-11.text-left-product {
+padding: 0px;color: #4e4e4e;
+}
+.col-md-11.text-left-product {
+padding: 0px;
+}
+.iconspan6-product.re-tkiem {
+padding-right: 6px;
+}
+.iconspan6-product {
+margin-right: 6px;
+}
+.bg-product {
+    line-height: 1.1;
+    min-height: 120px;
+}
+.text-view-product {
+color: #999999;
+font-weight: bold;
+text-align: center;
+font-size: 21px;
+}
+
+#giaiphap-ez1-prod {
+  background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+.h3-span-pro {
+margin-bottom: 0px;
+font-size: 26px;
+}
+.hieght-pad {
+padding-bottom: 30px;
+}
+.iphone-view-product {
+background-color: #4fbdd9;
+border-radius: 27px;
+height: 60px;
+width: 300px;
+color: #fff;
+font-variant: small-caps;
+padding: 10px 10px 10px 21px;
+font-size: 24px;
+margin-left: -17px;
+}
+.ez-box-p-pro {
+min-height: 351px;
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+.text-just {
+text-align: justify;
+color: #4e4e4e;
+padding: 0px;
+line-height: 1.2;
+}
+
+.tinhnang-prod {
+min-height: 500px;
+background: url("../img/bg-giaiphap.png") repeat !important;
+}
+.ez-box {
+border-radius: 5px;
+font-size: 22px;
+text-align: center;
+color: #4e4e4e;
+}
+.caption-prod {
+/* background-color: #ffffff; */
+border-radius: 4px;
+}
+
+#quanlycuahang-prod {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+}
+#quanlycuahang-prod-ez2 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 383px;
+}
+.ez-box-pro-pro {
+
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+.tn-prod-2 {
+min-height: 338px;
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+.baocao-product {
+background-color: #bb88b5;
+border-radius: 27px;
+height: 60px;
+width: 222px;
+color: #fff;
+font-variant: small-caps;
+padding: 10px !important;
+font-size: 24px;
+text-align: center !important;
+}
+
+/************bao cao ***************/
+.report-bc { min-height:400px;}
+.reprot-page6 {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 300px;
+}
+
+.bc-pro-page6 {
+min-height: 134px;
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+
+/********  page 7****************/
+#maket-prod {
+background: url("../img/bg-marketting.png") repeat !important;
+}
+#box-market {
+background: url("../img/bg-marketting.png") repeat !important;
+min-height: 383px;
+}
+.p-view-ttkh {
+line-height: 1.2em;
+font-size: 15px;
+color: #4e4e4e;
+}
+
+.box-pr-duct-p2 {
+background: url('../img/bg-banhangtrenmoithietbi.png') repeat;
+min-height: 500px;
+}
+.item.row.item-page5 {
+min-height: 380px;
+}
+.item.row.item-procd {
+min-height: 315px;
+}
+
+#giaiphap-product {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+min-height: 526px;
+}
+
+#giaiphap-pag1-prod {
+background: url("../img/bg-giaiphap.png") repeat !important;
+}
+
+.text-just-prod {
+text-align: justify;
+color: #f6f6f6;
+padding: 0px;
+}
+.col-md-12.text-left-prod {
+line-height: 1.5;
+font-size: 23px;
+padding: 0px;
+color: #f6f6f6;
+margin-left: 13px;
+}
+#title_khachhang-product {
+color: #fff;
+font-size: 32px;
+font-weight: bold;
+margin: 0px 0px 0px 9px;
+}
+.p-view-ttkh-product {
+line-height: 1.2em;
+font-size: 15px;
+color:#fff;
+}
+.col-md-12.text-left-product {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+}
+.ez-box-p-pro-edit {
+min-height: 286px;
+font-size: 16px;
+color: #4e4e4e;
+padding: 0px 15px 15px 14px;
+border-radius: 5px;
+line-height: 1.5;
+}
+.box-pr-duct-p2-edit {
+background: url('../img/bg-banhangtrenmoithietbi.png') repeat;
+min-height: 463px;
+}
+
+#giaiphap-product-edi-00 {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+min-height: 460px;
+}
+#features1 {background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;}

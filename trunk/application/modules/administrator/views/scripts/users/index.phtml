@@ -1,0 +1,59 @@
+<script>
+function marks(id){
+	var answer = confirm("Bạn có chắc chắn muốn xóa không?")
+    if (answer){
+        window.location = "<?php echo $this->baseUrl(); ?>/admin/users/delete/id/"+id;
+    }
+    
+    return false;
+}
+</script>
+
+    <header>
+      <h3 class="tabs_involved">Quản lý người dùng</h3>
+      
+<div class="functionBtnEvent">
+        <ul>
+          <li><a href="#">Thêm mới</a></li>
+        </ul>
+</div>
+    </header>
+    <div class="module_content">
+        <table cellspacing="0" class="tablesorter tablesorterBorder">
+        <thead>
+        <tr>
+                <th width="20">STT</th>
+                <th width="80">Username</th>
+                <th width="120">Họ tên</th>
+                <th width="100">Ngày sinh</th>
+                <th>Email</th>
+                <th>Ngày đăng ký</th>
+                <th>Điều khiển</th>		
+                
+        </tr>
+        </thead>
+        <?php foreach($this->data as $key=>$value):
+        $class = null;
+            if ($key % 2 == 0) {
+                $class = ' class="altrow"';
+            }
+        ?> 
+        <tr <?php echo $class;?>>
+                <td><?php echo $key + 1;?></td>
+                <td><div style="width: 80px; word-wrap: break-word;"> <?php echo $value['user_name']; ?></div></td>
+                <td><?php echo $value['firstname']; ?></th>
+                <td><?php echo date('d/m/Y',$value['birthday']); ?></td>
+                <td><?php echo $value['email']; ?></td>
+                <td><?php echo date('d/m/Y',$value['reg_date']); ?></td>
+                <td><a href="#">Edit</a><?php if($value['user_name'] != 2) { ?> <a href="#" onclick="marks('<?php echo $value['user_name'];?>')">Delete</a><?php }?></td>		
+                
+        </tr>    
+        <?php endforeach; ?>
+    
+        </table>
+    </div>
+	
+ 
+	<div class="paging">
+	<?php echo $this->paginationControl($this->data, 'Sliding', 'pagination.phtml'); ?>
+	</div>

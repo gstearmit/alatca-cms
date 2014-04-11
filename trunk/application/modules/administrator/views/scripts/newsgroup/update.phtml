@@ -1,0 +1,78 @@
+<?php 
+	$newsgroup = $this->newsgroup;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Newsgroup key bị trùng, vui lòng chọn key khác!</span></div>';
+	}
+	$active = (int)@$newsgroup['active'];
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Thêm mới / Cập nhật nhóm tin</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        Nhóm tin
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/newsgroup/update" accept-charset="UTF-8">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" /><div class='form-group'>
+                        <label class='col-md-3 control-label' for='group_name'>Tên nhóm</label>
+                        <div class='col-md-5'>
+                        	<input type="text" class='form-control' id="group_name" name="group_name" placeholder='Newsgroup key' value="<?php echo @$newsgroup['group_name'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='group_order' placeholder='Page URL'>Thứ tự ưu tiên</label>
+                        <div class='col-md-5'>
+                        	<input  class='form-control' type="text" id="group_order" name="group_order" value="<?php echo @$newsgroup['group_order'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='description'>Mô tả</label>
+                        <div class='col-md-5'>
+                        	<textarea  class='form-control' type="text" id="description" name="description"><?php echo @$newsgroup['description'];?></textarea>
+                        </div>
+                      </div>
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' onclick="return validateData()" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/newsgroup';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

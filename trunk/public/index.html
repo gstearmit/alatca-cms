@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+<style>
+	body { background:#CCC; margin:0; padding:0;}
+	#icons-box { width:370px; margin:100px;}
+	#content-box div { background:url(images/bg-div-content.png) repeat; width:100%; height:200px; color:#fff; display:none;}
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/iconbox/styles.css" />
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+    jQuery('#myiconbox').jcarousel();
+	
+	
+	var n = $("#myiconbox li a").length;
+	var str = "";
+	for	(var i=1; i<=n; i++) {
+		str = str + "$('#icon-"+i+"').click ( function(){$('.jcarousel-item').removeClass('active');$('#icon-"+i+"').addClass('active');$('#content-box .tab').hide();$('#content-"+i+"').show();});";
+	}
+	eval(str);
+
+});
+
+</script>
+
+</head>
+
+<body>
+	<div id="icons-box">
+    	  <ul id="myiconbox" class="jcarousel-skin-tango">
+            <li id="icon-1"><a href="#"><img src="images/i-sk.png" /></a></li>
+            <li id="icon-2"><a href="#"><img src="images/i-ss.png" /></a></li>
+            <li id="icon-3"><a href="#"><img src="images/i-eb.png" /></a></li>
+            <li id="icon-4"><a href="#"><img src="images/i-t.png" /></a></li>
+            <li id="icon-5"><a href="#"><img src="images/i-gt.png" /></a></li>
+            <li id="icon-6"><a href="#"><img src="images/i-sk.png" /></a></li>
+            <li id="icon-7"><a href="#"><img src="images/i-ss.png" /></a></li>
+            <li id="icon-8"><a href="#"><img src="images/i-eb.png" /></a></li>
+            <li id="icon-9"><a href="#"><img src="images/i-t.png" /></a></li>
+            <li id="icon-10"><a href="#"><img src="images/i-ss.png" /></a></li>
+            <li id="icon-11"><a href="#"><img src="images/i-eb.png" /></a></li>
+            <li id="icon-12"><a href="#"><img src="images/i-t.png" /></a></li>
+          </ul>
+    </div>
+    <div id="content-box">
+    	<div class="tab" id="content-1">
+        	Sức khỏe
+        </div>
+    	<div class="tab" id="content-2">
+        	Sinh sản
+        </div>
+    	<div class="tab" id="content-3">
+        	Sức khỏe 3
+        </div>
+    	<div class="tab" id="content-4">
+        	Sinh sản 4
+        </div>
+    	<div class="tab" id="content-5">
+        	Sức khỏe 5
+        </div>
+    	<div class="tab" id="content-6">
+        	Sinh sản 6 
+        </div>
+    	<div class="tab" id="content-7">
+        	Sức khỏe 7
+        </div>
+    	<div class="tab" id="content-8">
+        	Sinh sản 8
+        </div>
+    	<div class="tab" id="content-9">
+        	Sức khỏe 9
+        </div>
+    	<div class="tab" id="content-10">
+        	Sức khỏe 10
+        </div>
+    	<div class="tab" id="content-11">
+        	Sinh sản 11
+        </div>
+    	<div class="tab" id="content-12">
+        	Sức khỏe 12
+        </div>
+    </div>
+</body>
+</html>

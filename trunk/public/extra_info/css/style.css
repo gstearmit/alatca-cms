@@ -1,0 +1,120 @@
+#fill-info-3step {
+    background-color: white; 
+    min-height: 595px;
+    height: 1045px; 
+    margin:30px 112px 30px 112px;    
+}
+
+/*Header: logo and welcome*/
+#header-3step #logo {
+    float: left;
+    margin: 0px 0px 47px 0px;
+    
+}
+#header-3step #welcome {
+    float: right;
+    width: 71%;;
+    margin: 0px 9% 47px 0px;
+}
+#header-3step #welcome p {
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/*Step process*/
+#fill-info-3step #step-process {
+    width: 31%;
+    margin: 0 auto;
+}
+
+#fill-info-3step #step-process h1{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;    
+}
+#fill-info-3step #step-process #step-display{
+    text-align: center;
+}
+
+/*Form*/
+#fill-info-3step .frmStep {
+    margin: 25px 150px 0px 150px;
+    padding: 42px 152px  38px 103px;
+    border: solid #b0d8e5 7px;
+    border-radius: 7px;
+}
+.frmStep .row {
+    padding-bottom: 17px;   
+}
+.frmStep .row label{
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    width: 33%;
+    padding: 8px 0px;    
+}
+.frmStep .row .txt_input{
+    width: 62%;
+    height: 28px;
+    padding: 0px 4px 0px 4px;
+}
+
+.frmStep .btn{
+    font-family: Arial;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    padding: 5px 12px;
+    font-weight: bold;
+    background: url(../img/btn-bkg.png) repeat-x;
+    border-radius: 6px;
+}
+.frmStep .selectbox_input{
+   width: 64%;
+   /*height: 28px;*/
+   overflow: hidden;
+   background: url(../img/down_arrow_select.jpg) no-repeat right;
+   border: 1px solid #ccc;   
+}
+.selectbox_input {
+   padding: 5px;
+   font-size: 12px;
+    -webkit-appearance: none;
+}
+
+/*Step Final*/
+.step-final {
+    margin: 25px 129px 0px 129px;
+    padding: 42px 148px  38px 85px;
+    border: solid #b0d8e5 7px;
+    border-radius: 7px;  
+    position: absolute;
+    float: left;  
+}
+#stepfinal_box {
+    margin: 13px 0px 0px 80px ;
+}
+#stepfinal_box h1 {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+} 
+#stepfinal_box ul {
+    list-style-image: url(../img/bullet.png);
+}
+#stepfinal_box ul li {
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 31px;
+}
+
+/*Clear Both*/
+.clear-both {
+    clear: both;
+}

@@ -1,0 +1,47 @@
+.navbar-header.header-sty {
+padding: 0px;
+}
+.paddingmenu-99 {padding: 0px;}
+
+.navbar-collapse.collapse {
+	/*
+display: block !important;
+height: auto !important;
+padding-bottom: 0;
+overflow: visible !important;
+*/
+max-width: 1115px;
+}
+
+.logo_ez {
+    width: 160px;padding-top: 4px;
+}
+.navbar.navbar-inverse .nav > li > a {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-variant: small-caps;
+    font-weight: bold;
+    opacity: 0.6;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear 0s;
+}
+
+.navbar-inverse {
+background: url("../img/bg-header-lo.png") repeat-x;
+border-color: #080808;
+padding-left: 54px;
+}
+.nav.navbar-nav.navbar-right.nav_top {
+    margin-top: 11px;
+    position: relative;
+    right: 20px;
+}
+
+.navbar-collapse.collapse {
+	/*display: block !important;*/
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 0;
+}

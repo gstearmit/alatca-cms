@@ -1,0 +1,77 @@
+
+
+
+<form id="frmList" name="frmList" method="post">
+<input type="hidden" id="sliderUrl" value="<?php echo WEB_PATH;?>/administrator/slider" />
+	<br/>
+	<div class="row">
+	<?php 
+	$message="";
+	
+	if(isset($_GET['status'])){
+	$status	  = $_GET['status'];
+	}else{
+		$status="";
+	}
+	//echo $status;
+	if($status == 1){
+		$stt="Update";
+		$message = '<div class="alert alert-success alert-dismissable">
+                <a class="close" data-dismiss="aler" href="#">&times;</a>
+					<i class="icon-ok-sign"></i>
+                <strong>'.$stt.'</strong>
+                Success !
+
+              </div>';
+	}
+	if($status == 2){
+		$stt="Add new";
+		$message = '<div class="alert alert-success alert-dismissable">
+                <a class="close" data-dismiss="aler" href="#">&times;</a>
+					<i class="icon-ok-sign"></i>
+                <strong>'.$stt.'</strong>
+                 Success !
+	
+              </div>';
+	}
+	?>
+	<div class="box_message"><?php echo $message; ?></div>
+	<div class="col-md-4">
+	 <div class=' page-header-with-buttons'>
+	 	
+                <h1 class='' style="margin-top: 0px;">
+                  <i class=' icon-paper-clip  '></i>
+                  <span class="page_title">Quản lý Slider</span>
+                </h1>
+              	</div>
+	</div>                  
+       		<div class="col-md-2 pull-right ">
+         			
+              		 <a href="<?php echo WEB_PATH;?>/administrator/slider/update" class="btn btn-primary pull-right" title="Add"> <i class="icon-plus "></i>
+              		Add 
+              		 </a>
+              		
+            </div>   
+            <div class="col-md-5 pull-right">
+			<div class="input-group controls-group">
+			
+		                              <input id="keyword" name="keyword" class="form-control" type="text" name="q" class="form-control pull-left" placeholder="Enter a keyword ..." title="Enter a keyword ..." value="">
+		                              
+		                              <span class="input-group-btn">
+		                                <button id="search" type="button" class="btn  btn-primary" title="Search">
+		                                  <i class="icon-search"></i>
+		                                </button>
+		                                <?php echo $this->sliderGroup; //$bien = $this->sliderGroup; var_dump($bien);?>
+		                                  <button  id="reset" type="button" class="btn btn-primary" title="Reset">
+		                                  <i class="icon-refresh"></i>
+		                                </button>
+		                                
+		                                <button style="width: 30px !important;background: none; border: 0px;">
+		                             		 <i id="loading" class="icon-spinner icon-spin"></i>
+		                                </button>
+		                              </span>
+		                            </div>
+		       </div>
+	</div>
+	<span id="sliderArea"></span>
+</form>

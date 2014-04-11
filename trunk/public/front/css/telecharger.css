@@ -1,0 +1,128 @@
+#teleche-phg-01{
+min-height: 689px;
+}
+.del-padding{padding:0px;}
+.del-padding-5px {padding:0px 0px 0px 5px;}
+.del-margin { margin:0px;}
+#telechar-01 {
+background: url("../img/bg-giaiphap.png") repeat;
+min-height: 95px;
+padding-bottom: 10px;
+}
+.gp-h3-teleche {
+color: #4e4e4e;
+font-size: 32px;
+font-weight: bold;
+margin: 11px 0px 0px 22px;
+}
+.h3-telechevie {
+line-height: 1.1;
+padding: 0px;
+margin: 0px 0px 0px 22px;
+color: #4e4e4e;
+font-size: 25px;
+height: 30px;
+}
+#page-bg_tele {
+background: url("../img/bg-03-download.png") repeat !important;
+}
+#page-03-teleche-01{
+background: url("../img/bg-03-download.png") repeat !important;min-height: 668px;
+}
+#telechar-03-01 {
+background: url("../img/bg-03-download.png") repeat;
+min-height: 111px;
+}
+#home_bg_tecle {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 550px;
+}
+#bg_04_vb  {
+background: url("../img/bg-04-download.png") repeat !important;
+}
+#page-04-teleche-01{
+background: url("../img/bg-04-download.png") repeat !important;min-height: 614px;
+}
+#telechar-04-01 {
+background: url("../img/bg-04-download.png") repeat;
+min-height: 111px;
+}
+
+#page-bg-05-v {
+background: url("../img/bg-05-download.png") repeat !important;
+}
+#page-05-teleche-01{
+background: url("../img/bg-05-download.png") repeat !important;min-height: 550px;
+}
+#telechar-05-01 {
+background: url("../img/bg-05-download.png") repeat;
+min-height: 111px;
+}
+.gp-h3-te-05 {
+color: #fff;
+font-size: 32px;
+font-weight: bold;
+margin: 11px 0px 0px 22px;
+}
+
+.col-md-12.text-h03-teleche {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+margin: 0px;
+min-height: 55px;
+color:#fff;
+}
+.text-just_tecle{
+text-align: justify;
+color: #fff;
+padding: 0px;
+line-height: 1.2;
+float: left;
+}
+
+.telechevie05 {
+line-height: 1.1;
+padding: 0px;
+margin: 0px 0px 0px 22px;
+color: #fff;
+font-size: 25px;
+height: 30px;
+}
+.teleche-ul-prix {
+text-align: justify;
+color: #fff;
+padding: 0px;
+line-height: 1.2;
+float: left;
+font-size: 15px;
+margin-left: 24px;
+}
+
+p.teleche-p-v a {
+color: #08F;text-decoration: underline;
+}
+.teleche-p-v {
+text-align: justify;
+color: #08F;
+padding: 0px;
+line-height: 1.2;
+font-size: 19px;
+font-weight: bold;
+
+text-decoration: underline;
+}
+
+.teleche-p-v a:hover{text-decoration: underline;}
+
+
+.text-fff {
+text-align: justify;
+color: #FFF;
+padding: 0px;
+line-height: 1.2;
+float: left;
+}

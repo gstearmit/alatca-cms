@@ -1,0 +1,94 @@
+.navbar .container .collapse .nav .dropdown .dropdown-menu {
+display: inline-block;
+width: 940px;
+margin-top: 0px;
+}
+.navbar-right .dropdown-menu {
+right: 0;
+left: auto;
+}
+@media (min-width: 768px)
+.navbar-right .dropdown-menu {
+right: 0;
+left: auto;
+}
+
+.collapse.navbar-collapse.navbar-ex1-collapse {
+padding-right: 0px;
+padding-top: 8px; 
+}
+ul#topnav li.active {
+color:#69c4df;
+}
+/***************#topnav bar-2***********************/
+ul#topnav li a {
+color: #fff;
+}
+ul#topnav li a:hover {color:#69c4df;}
+ul#topnav {
+	margin: 0; padding: 0;
+	float: left;
+	list-style: none;
+	position: relative;
+}
+ul#topnav li {
+	float: left;
+	margin: 0; padding: 0;
+	
+}
+ul#topnav li a {
+	padding: 10px 15px;
+	display: block;
+	/* color: #f0f0f0;*/
+	text-decoration: none;
+}
+ul#topnav li:hover { background: #1376c9 url ("../img/topnav_a.gif") repeat-x; }
+ul#topnav li span {
+	float: left;
+	padding: 15px 0;
+	position: absolute;
+	left: 0; top:35px;
+	display: none;
+	width: 970px;
+	background: url("../img/bg-menu-topnav-2.png") repeat!important;
+	color: #fff;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-khtml-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+ul#topnav li:hover span { display: block; }
+ul#topnav li span a {
+display: inline;
+height: 38px;
+font-weight: bold;
+color: #fff;
+font-size: 14px;
+font-family: "Helvetica Neue", "HelveticaNeue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+ul#topnav li span a:hover {text-decoration: none; font-weight: bold;}
+
+/*****************end topnav bar 02********************/
+
+.navbar-right .dropdown-menu {
+right: 0;
+left: auto;
+}
+.navbar-right .dropdown-menu {
+right: 0;
+left: auto;
+}
+.menu ul li ul {
+display: none;
+float: left;
+width: 1266px;
+left: -557px;
+}
+.menu ul li ul {
+display: none;
+float: left;
+width: 1266px;
+left: -557px;
+}

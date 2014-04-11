@@ -1,0 +1,194 @@
+<?php 
+    $objUtil = new HT_Model_administrator_models_utility();
+	$slider = $this->slider;
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Dữ liệu đã được cập nhật thành công</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>slider key bị trùng, vui lòng chọn key khác!</span></div>';
+	}
+	$active = (int)@$slider['active'];
+	$bg_article_img = @$slider['bg_article_img'];
+	$sil_img_01     = @$slider['sil_img_01'];
+	$sil_img_02     = @$slider['sil_img_02'];
+	$sil_img_03     = @$slider['sil_img_03'];
+	$sil_img_04     = @$slider['sil_img_04'];
+?>
+<div class='row' id='content-wrapper'>
+            <div class='col-xs-12'>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='page-header'>
+                    <h1 class='pull-left'>
+                      <i class='icon-edit'></i>
+                      <span class="page_title">Thêm mới / Cập nhật Thư viện Slider</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div class='row'>
+                <div class='col-sm-12'>
+                  <div class='box'>
+                    <div class='box-header blue-background'>
+                      <div class='title'>
+                        <div class='icon-edit'></div>
+                        slider page
+                      </div>
+                      <div class='actions'>
+                        <a class="btn box-remove btn-xs btn-link" href="#"><i class='icon-remove'></i>
+                        </a>
+                        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='box-content'>
+                        <form id="frmUpdate" name="frmUpdate" class="form form-horizontal" style="margin-bottom: 0;" method="post" action="<?php echo WEB_PATH;?>/administrator/slider/update" accept-charset="UTF-8" enctype="multipart/form-data">
+						<input type="hidden" id="id" name="id" value="<?php echo $this->id;?>">
+						<input type="hidden" id="do" name="do" value="submit" />
+                        <input name="authenticity_token" type="hidden" />
+                     
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider_key'>Slider key</label>
+                        <div class='col-md-9'>
+                        	<input type="text" class='form-control' id="sil_key" name="sil_key" placeholder='slider key' value="<?php echo @$slider['sil_key'];?>" />
+                        </div>
+                      </div>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider_title' placeholder=''>Slider title</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="text" id="sil_title" name="sil_title" value="<?php echo @$slider['sil_title'];?>" />
+                        </div>
+                      </div>
+                       <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Link news url' placeholder=''>Link news url</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="text" id="link_news" name="link_news" value="<?php echo @$slider['link_news'];?>" />
+                        </div>
+                      </div>
+                      
+                      <div class='form-group'>
+                          <label class='control-label control-label col-sm-8' for=''>Định dạng khi upload ảnh : *.<?php echo IMAGE_TYPE_ALLOW;?>, dung lượng nhỏ hơn 1MB</label>
+                          <div class='col-sm-4 controls'>
+                          </div>
+                      </div>
+                      
+                       <?php if($bg_article_img){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$slider['sil_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $bg_article_img;?>" />
+			              <input type="checkbox" name="del_bg_article_img"> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                        
+                        
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Background article image' placeholder=''>Background article image</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="file" id="bg_article_img" name="bg_article_img" value="<?php echo @$slider['bg_article_img'];?>"  />
+                        </div>
+                      </div>
+                      
+                      
+                      <?php if($sil_img_01 ){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$slider['sil_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $sil_img_02;?>" />
+			              <input type="checkbox" name="del_sil_img_01 "> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                        
+                        
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider images 01' placeholder=''>Slider images 01</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="file"  id="sil_img_01" name="sil_img_01" value="<?php echo @$slider['sil_img_01'];?>"   />
+							
+                        </div>
+                      </div>
+                      
+                       <?php if($sil_img_02){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$slider['sil_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $sil_img_02;?>" />
+			              <input type="checkbox" name="del_sil_img_02"> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider images 02' placeholder=''>Slider images 02</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="file" id="sil_img_02" name="sil_img_02" value="<?php echo @$slider['sil_img_02'];?>" />
+                        </div>
+                      </div>
+                      
+                      
+                      <?php if($sil_img_03 ){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$slider['sil_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $sil_img_03 ;?>" />
+			              <input type="checkbox" name="del_sil_img_03 "> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                        
+                        
+                        
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider images 03' placeholder=''>Slider images 03</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="file" id="sil_img_03" name="sil_img_03" value="<?php echo @$slider['sil_img_03'];?>" />
+                        </div>
+                      </div>
+                      
+                      <?php if($sil_img_04){?>
+                        <div class='form-group'>
+                          <label class='control-label col-sm-3' for='Thứ tự sắp xếp ưu tiên'>Ảnh đang dùng</label>
+                          <div class='col-sm-4 controls'>
+                          <img width="340" height="230" alt="<?php echo @$slider['sil_description'];?>" src="<?php echo WEB_PATH;?>/public/uploads/news/<?php echo $sil_img_04;?>" />
+			              <input type="checkbox" name="del_sil_img_04"> Xóa ảnh 
+                           </div>
+                        </div>
+                        <?php }?>
+                      <div class='form-group'>
+                        <label class='col-md-3 control-label' for='Slider images 04' placeholder=''>Slider images 04</label>
+                        <div class='col-md-9'>
+                        	<input  class='form-control' type="file" id="sil_img_04" name="sil_img_04" value="<?php echo @$slider['sil_img_04'];?>" />
+                        </div>
+                      </div>
+                      
+                    <div class='form-group'>
+                          <label class='control-label col-sm-3' for=''>Description</label>
+                       </div>
+                       <div class='form-group' style = "margin: 0px 20px 0px 20px ;">
+                           <textarea type="text" id="sil_description" name="sil_description"><?php echo stripcslashes(@$slider['sil_description']);?></textarea>
+                           <?php $objUtil->renderCkeditor('sil_description',400)?>
+                       </div>
+                      
+                       
+                       
+                       
+                      <div class='form-actions form-actions-padding-sm'>
+                        <div class='row'>
+                          <div class='col-md-9 col-md-offset-3'>
+                            <button class='btn btn-primary' onclick="return validateData()" >
+                              <i class='icon-save'></i>
+                              Save
+                            </button>
+                            <a href="<?php echo WEB_PATH.'/administrator/slider';?>"><div class='btn'>Cancel</div></a>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>

@@ -1,0 +1,82 @@
+<?php 
+	$objACL		= new HT_Model_administrator_models_acl();
+	$objMenu	= new HT_Model_administrator_models_menu();
+	@$auth 		= Zend_Auth::getInstance();
+	$user 		= @$auth->getStorage()->read();
+	$groupMenu	= $objMenu->getLeftMenu();
+?>
+<nav id='main-nav'>
+        <div class='navigation'>
+          <ul class='nav nav-stacked'>
+            <li class=''>
+            <a href='<?php echo WEB_PATH;?>/administrator' style="height: 0px;"></a>
+              <a href='<?php echo WEB_PATH;?>/administrator'>
+                <i class='icon-dashboard'></i>
+                <span><?php echo ucfirst($user->role_name);?> dashboard</span>
+              </a>
+            </li>
+            
+            <?php 
+	            if(isset($user->role_id) && (int)$user->role_id >0){
+	            	$roldId = (int)$user->role_id;
+	            	//$roldId = 13;
+	            	$actionRight = $objACL->getActionRight($roldId);
+	            	$groupMenu	 = $objMenu->buildLeftMenu($groupMenu,$actionRight);
+	            	//echo "<pre>";
+	            	//print_r($moduleRight);
+	            	foreach((array)$groupMenu as $group){
+	            		$groupId 		= $group['group_id'];
+	            		$groupName 		= $group['group_name'];
+	            		$groupURL 		= $group['group_url'];
+	            		$menuList 		= $group['menu_list'];
+	            		$groupIcon 		= trim($group['group_icon']);
+	            		$hasSub			= $group['has_sub'];
+	            		if(!$groupIcon) $groupIcon = 'icon-edit';
+           		if($hasSub){ 
+	       ?>
+            
+            <li class=''>
+              <a class="dropdown-collapse" href="#">
+	              <i class='<?php echo $groupIcon;?>'></i>
+	              <span><?php echo $groupName;?></span>
+	              <i class='icon-angle-down angle-down'></i>
+              </a>
+              <ul class='nav nav-stacked'>
+              <?php 
+		  	   		foreach($menuList as $menu){
+						$menuName = $menu['menu_name'];
+						$menuUrl = $menu['menu_url'];
+						$actionId = $menu['action_id'];
+						list($info,$menuUrl) = explode('administrator/', $menuUrl);
+						$menuUrl 			 = WEB_PATH.'/administrator/'.$menuUrl;
+						if(in_array($actionId,$actionRight)){
+		  	   				echo "<li class=''>";
+		  	   					echo "<a href='".$menuUrl."'>";
+		  	   						echo "<i class='icon-caret-right'></i>";
+		  	   						echo "<span>".$menuName."</span>";
+		  	   					echo "</a>";
+		  	   				echo "</li>";
+		  	   			}
+		  	   		}
+		  	   ?>  	
+              </ul>
+            </li>
+            <?php }else{
+            	if(strpos($groupURL, 'administrator')=== FALSE){
+            		continue;
+            	}else{
+            		$arr = explode('administrator', $groupURL);
+            		$groupURL = WEB_PATH.'/administrator'.$arr[1];
+            	}
+            ?>
+            <li class=''>
+              <a  href="<?php echo $groupURL;?>">
+	              <i class='<?php echo $groupIcon;?>'></i>
+	              <span><?php echo $groupName;?></span>
+              </a>
+            </li>
+            <?php 
+            }}}?>
+          </ul>
+        </div>
+      </nav>

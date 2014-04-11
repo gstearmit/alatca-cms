@@ -1,0 +1,59 @@
+<?php 
+	@$auth 		= Zend_Auth::getInstance();
+	$user 		= $auth->getStorage()->read();
+	//var_dump($user->role_id);die();
+	
+	if(isset($user->userid))
+	{
+?>
+<header>
+      <nav class='navbar navbar-default' style="background-color: #00ACEC; height: 42px;">
+        <a class='navbar-brand' href='<?php echo WEB_PATH;?>/administrator'>
+          <img class="logo" alt="Flatty" src="<?php echo WEB_PATH;?>/public/assets/images/logo-web1.png" />
+          <img width="21" height="21" class="logo-xs" alt="Flatty" src="<?php echo WEB_PATH;?>/public/assets/images/logo-web1.png" />
+        </a>
+        <a class='toggle-nav btn pull-left' href='#' style="background-color: #00ACEC">
+          <i class='icon-reorder'></i>
+        </a>
+        <ul class='nav' style="background-color: #00ACEC">
+          <li class='dropdown blue user-menu'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+              <img width="50" height="23" style="width: 50px;border: 0px;" alt="<?php echo $user->firstname.' '.$user->lastname;?>" src="<?php echo WEB_PATH;?>/public/assets/images/avatar.jpg" />
+              <span class='user-name'><?php echo $user->lastname.' '.$user->firstname;?></span>
+              <b class='caret'></b>
+            </a>
+            <ul class='dropdown-menu'>
+              <li>
+                <a href='<?php echo WEB_PATH;?>/administrator/user/profile'>
+                  <i class='icon-user'></i>
+                  My profile
+                </a>
+              </li>
+              <li>
+                <a href='<?php echo WEB_PATH;?>/administrator/user/changepass'>
+                  <i class='icon-cog'></i>
+                  Change password
+                </a>
+              </li>
+              <li class='divider'></li>
+              <li>
+                <a href="<?php echo WEB_PATH;?>/user/index/logout">
+                  <i class='icon-signout'></i>
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+      </nav>
+    </header>
+<?php 
+	}// if(isset($user->userid))
+?>
+
+
+	
+
+	
+

@@ -1,0 +1,221 @@
+.img-li-tabl-ul-04 {
+height: 14px;
+width: 14px;
+float: left;
+margin-top: 8px;
+}
+li p {
+float: right;
+width: 91%;
+text-align: justify;
+}
+.ul-tabl-04 li {
+padding: 5px;
+float: left;
+min-height: 50px;
+width: 100%;
+}
+
+
+
+.icon-table {
+margin-right: 7px;
+}
+.del-padding{padding:0px;}
+.del-padding-5px {padding:0px 0px 0px 5px;}
+.del-margin { margin:0px;}
+#page-01-tablette-of-hei {
+background: url("../img/bg-giaiphap.png") repeat !important;
+min-height: 734px;
+}
+.icon-table.re-tkiem {
+position: relative;
+top: -11px;
+}
+.height-tablebk-page-03 {
+margin-top: 0px;
+}
+.col-md-12.text-left-tablete {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 45px;
+}
+.pad-top-tab {position:relative; top:95px;}
+#giaiphap-pag03-table {
+min-height: 269px;
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+}
+.cta-table-01 {
+background-color: #c01c2b;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 21px;
+font-size: 24px;
+text-align: center;
+
+}
+.cta-table-02 {
+background-color: #4fbdd9;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #fff;
+font-variant: small-caps;
+padding: 5px 10px 10px 21px;
+font-size: 24px;
+text-align: center;
+}
+#gp-tabletet03 {
+background: url("../img/bg-banhangtrenmoithietbi.png") repeat !important;
+min-height: 479px;
+}
+.pad-cod-8 {
+padding-top: 55px;
+}
+.div-video {
+	width:375px;
+	height:238px;
+	background-color:#fff;
+	border-radius:6px;
+	padding: 2px 8px 8px 8px;
+}
+.div-video iframe {
+padding: 8px;
+border-radius: 5px;
+height: 215px;
+width: 291px;
+background-color: #000;
+margin: 11px 5px 5px 8px;
+}
+.img-table-04 {
+    background-color: #FFFFFF;
+    border-radius: 19px;
+    height: 322px;
+    padding: 8px;
+    width: 447px;
+}
+
+.img-table-04 img {
+    border-radius: 17px;
+    height: 305px;
+    padding: 2px;
+    width: 438px;
+}
+
+
+.col-md-12.text-lfet-tablete {
+line-height: 1.5;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 33px;
+color: #4e4e4e;
+font-size: 32px;
+font-weight: bold;
+margin: 0px 0px 0px 10px;
+}
+.gp-viet-table-1 {
+color: #4e4e4e;
+font-size: 32px;
+font-weight: bold;
+margin: 11px 0px 0px 11px;
+}
+#page-04-tables {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 291px;
+}
+#page-04-02-table-view {
+	background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+	padding-left: 25px;
+padding-right: 25px;
+}
+.padd-l-table {
+padding: 30px 0px 0px 14px;
+}
+.padd-ed-table-02 {
+padding: 15px 0px 0px 14px;
+}
+.height-able {
+padding: 0px 0px 0px 16px;
+margin-top: 11px;
+}
+.height-table-v-012 {
+height: 20px;
+}
+
+.text-h3-table {
+line-height: 1.5;
+font-size: 24px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+min-height: 23px;
+}
+.col-md-12.text-h03-tbale {
+line-height: 1.5;
+font-size: 17px;
+padding: 0px;
+display: inline-block;
+float: left;
+text-align: left;
+margin: 0px;
+min-height: 45px;
+}
+.view-tanble-07 {
+min-height: 141px;
+}
+
+#gp-page-06-table {
+background: url("../img/bg-quanly-cua-hang.png") repeat !important;
+min-height: 125px;
+}
+.item.row.item-doc-tables-edit {
+min-height: 347px;
+}
+.cta-table-pag05 {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+width: 223px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+}
+
+.cta-table-pag05_1 {
+background-color: #C01C2B;
+border-radius: 27px;
+height: 53px;
+color: #FFF;
+font-variant: small-caps;
+padding: 5px 10px 10px 10px;
+font-size: 24px;
+text-align: center !important;
+width: 231px;
+margin-left: 39px;
+}
+
+.ul-tabl-04.pad-top-tab li p {
+width: 91%;
+float: left;
+text-align: justify;
+padding-left: 18px;
+}
+
+.view-p-tablef {
+width: 100px;
+}
+.ul-tabl-04.pad-top-tab li {
+min-width: 93%;
+}

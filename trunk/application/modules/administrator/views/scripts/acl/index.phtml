@@ -1,0 +1,52 @@
+<?php 
+	$status	  = $this->status;
+	$message  = null;
+	if($status == 1){
+		$message = '<div class="ub_message">Đã cấp quyền thành công!</div>';
+	}elseif($status == "-1"){
+		$message = '<div class="ub_message"><span>Có lỗi sảy ra trong quá trình cập nhật dữ liệu</span></div>';
+	}
+	$rightList = $this->rightList;
+?>
+<form id="frmList" name="frmList" method="post" action="<?php echo WEB_PATH;?>/administrator/acl/update">
+<input type="hidden" id="aclUrl" value="<?php echo WEB_PATH;?>/administrator/acl" />
+<input type="hidden" name="roleId" value="<?php echo $this->roleId;?>" />
+<div class="cb"></div>
+<article class="module width_full">
+<header>
+  <h3 class="tabs_involved">Quản lý quyền truy cập nhóm: <?php echo $this->role['role_name'];?></h3>
+</header>
+<div class="module_content">
+	<?php 
+		foreach((array)$rightList as $right){
+			$actions = $right['actions'];
+			echo '<div class="module_name">'.$right['module_name'].' - '.$right['module_name_display'].'</div>';
+			foreach((array)$actions as $action){
+				$rightId = (int)$action['right_id'];
+				$checked = null;
+				if($rightId) $checked = ' checked="checked"';
+				echo '<div class="action_name fl">';
+					echo '<input name="actions[]" value="'.$action['action_id'].'" type="checkbox" '.$checked.' />';
+					echo $action['action_name'];
+				echo '</div>';
+			}
+			echo '<div class="cb"></div>';
+		}
+	?>
+	<div class="ub_blank1"></div>
+	<div class="ub_button_list">
+		<div id="cancel" class="ub_button fl">
+			<a id="btnCheckall" class="checkall">Chọn hết</a>
+		</div>
+		<div id="btnSave"  class="ub_button fl">
+			Lưu lại
+		</div>
+		<div class="cb"></div>
+	</div>
+	<div class="cb"></div>
+	<?php echo $message;?>
+</div>
+</article>
+<div class="clear"></div>
+<script type="text/javascript" src="<?php echo WEB_PATH;?>/application/modules/administrator/views/scripts/acl/index.js"></script>
+</form>
