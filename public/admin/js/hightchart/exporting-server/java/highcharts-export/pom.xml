@@ -13,8 +13,8 @@
 	</organization>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.1.0.RELEASE</spring.version>
-		<batik.version>1.7</batik.version>
+		<spring.version>3.2.1.RELEASE</spring.version>
+		<batik.version>1.13</batik.version>
 		<cglib.version>2.2.2</cglib.version>
 		<java.version>1.6</java.version>
 	</properties>
@@ -61,7 +61,7 @@
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-codec</artifactId>
-			<version>1.7</version>
+			<version>1.13</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
